@@ -1,0 +1,1883 @@
+-Chapter 3 - Agility and Processes
+    -Intro
+        -Agile Manifesto
+            -"We are uncovering better ways of developing software by doing
+              it and helping others do it. Through this work we have come to
+              value:"
+            -Individuals and interactions over processes and tools.
+            -Working software over comprehensive documentation
+            -Customer collaboration over contract negotiation
+            -Responding to change over following a plan
+            -"That is, while there is value in the items on the right, we value
+              the items on the left more."
+        -Difficult or impossible to predict how a computer-based system will
+         evolve over time
+        -Fluidity implies change, and change is expensive
+            -particularly if it is uncontrolled or poorly managed
+        -Traditional models have a major failing:
+            -They forget the frailities of the people who build computer
+             software
+    -3.1 What is agility?
+        -Jacobson argues that the pervasiveness of change is the primary driver
+         for agility
+        -More than an effective response to change
+        -Encompasses the philosophy outlined in the Agile Manifesto
+        -Encourages team structures that make communication more facile
+        -Emphasizes rapid delivery of operation software
+        -Deemphasizes the importance of intermediate work products
+        -Customer is part of dev team
+        -Tries to eliminate the "us and them" mentaility
+        -Can be applied to any software process
+    -3.2 Agility and the Cost of Change
+        -Conventional wisdom states that cost of change increases nonlinearly
+         as a project progresses (over time)
+            -Self-explanatory: bigger, more complex systems are hard to modify
+        -Agility fans argue that a well-designed agile process "flattens" the
+         cost of change curve
+            -Changes later on cost less than in a traditional process model
+            -Supported by EVIDENCE
+                -Actual amount is unknown but significant
+    -3.3 What is an Agile Process?
+        -any agile software process is characterized in a manner that addresses
+         a number of key assumptions about the majority of software projects:
+            -1. difficult to predict which requirements and customer priorities
+                changing
+            -2. Design and construction of software are usually separate. This
+                makes the amount of design necessary unknown
+            -3. Analysis, design, and construction are not as predictable as we
+                would like
+        -adaptable processes must be used to manage unpredictability
+        -process must be incremental to drive progress
+        -incremental development strategies must be employed to create software
+         increments (prototypes) in short time frames so that adaption keeps
+         pace with change
+            -Provides means for both constant progress and customer feedback
+        -Agile Alliance 12 Principles:
+            -1.  Highest priority is to satisfy the customer through early and
+                 continuous delivery of valuable software
+            -2.  Welcome changing requirements, even late in development. Agile
+                 processes harness change for the customer's competitive
+                 advantage
+            -3.  Deliver working software frequently, from a couple of weeks to
+                 a couple of months, with a preference to the shorter timescale.
+            -4.  Business people and developers must work together daily
+                 throughout the project. 
+            -5.  Build projects around motivated individuals. Give them the
+                 environment and support they need, and trust them to get the
+                 job done.
+            -6.  The most efficient and effective method of conveying
+                 information to and within a development team is face-to-face
+                 conversation.
+            -7.  Working software is the primary measure of progress.
+            -8.  Agile processes promote sustainable development. The sponsors,
+                 developers, and users should be able to maintain a constant
+                 pace indefinitely
+            -9.  Continuous attention to technical excellence and good design
+                 enhances agility.
+            -10. Simplicity-the art of maximizing the amount of work not done-is 
+                 essential.
+            -11. The best architectures, requirements, and designs emerge from
+                 self-organizing teams.
+            -12. At regular intervals, the team reflects on how to become more
+                 effective, then tunes and adjusts its behavior accordingly.
+        -Agile proponents aruge that traditional processes are too slow and not
+         concerned with actually writing code
+            -Sticks in the mud
+        -Traditional proponents argue that agile doesn't scale well to
+         enterprise-wide products
+            -Glorified hackers
+        -No one is against against agility
+        -The new question is "What is the best way to achieve agility?" 
+        -Working software is good but it must be reliable, usable, and
+         maintainable
+        -Idealistic arguments are no bueno
+        -Scrum
+            -Very popular
+            -Work tasks are organized into sprints
+                -Short, time-boxed period
+                -Number of sprints per activity will vary depending on project size and complexity
+            -Scrum team
+                -Self-organizing interdisciplinary team consisting of a product
+                 owner, scrum master, and a small development team (3-6 people)
+                -Scrum master facilitates members of the team, providing
+                 guidance and removing obstacles faced by the development team
+            -Scrum artifacts
+                -Product backlog
+                    -Product owner organizes items in product backlog to meet
+                     the most important goals of all stakeholders
+                    -Never complete while product is still evolving
+                -Sprint backlog
+                    -Subset of product backlog items selected by the product
+                     team to be completed as the code increment during the
+                     current sprint
+                -Code increment
+                    -Current working prototype, updated as backlog items are
+                     completed
+            -Sprint planning
+                -Product owner states goals for the increment to be completed in
+                 the upcoming sprint
+                -Scrum master and dev team move items to and from the sprint
+                 backlog
+                -Dev team determines what can be delivered in the increment given
+                 constraints and timeline
+                -Dev team works with scrum master to determine what work needs to
+                 be done to deliver the increment
+                -Dev team decides what roles are needed and how they will be
+                 filled
+            -Daily scrum meetings keep developers on track
+                -What I did since last meeting
+                -What obstacles I encountered
+                -What are my plans for the day (until next meeting)
+            -Sprint review
+                -Demos
+                -Scrum team and stakeholders attend
+                -Determine success of sprint based on what was planned
+                -New features added or removed from product backlog
+            -Sprint retrospective
+                -What went well
+                -What could be improved
+                -What the team will commit to improving in the next sprint
+        -Extreme Programming (XP)
+            -Planning
+                -Listening
+                    -Creation of a set of "stories" that describe required
+                     output, features, and functionality for software to be
+                     built
+                    -Each "user story" is written by the customer and is placed
+                     on an index card
+                    -Customer assigns a value to the story based on priority and
+                     determined by value of feature
+                    -Members evaluate each story and assign a value based on
+                     development weeks necessary for feature
+                    -Customers and developers work together to decide how to
+                     group stories into the enxt release (software increment)
+                     to be developed
+                -Stories are then implemented immediately, the highest priority
+                 stories are tackled first, or the riskiest stories are tackled
+                 first
+                -Following each software increment (project release), the team
+                 computes project velocity, or the number of customer stories
+                 implemented during the release. Plans are modified based on
+                 project velocity
+            -Design
+                -XP design rigorously follows the KIS (keep it simple) principle
+                -Design of extra functionality is discouraged
+                -CRC (class-responsibility-collaborator) cards are encouraged
+                    -Object-oriented design tool
+                    -Only design work product produced in XP process
+                -Immediate creation of operational prototype following the
+                 discovery of a difficult design problem
+                -Design occurs before and after coding starts
+            -Coding
+                -Guided by unit tests
+                -Pair programming is a major key
+                    -Two programmers share a computer
+                    -Provides mechanism for real-time problem solving and
+                     quality assurance
+                -Each pair's work is continually integrated with the work of
+                 others
+                -Testing
+                    -Unit tests should be automated
+                    -Acceptance tests (customer tests) are specified by the
+                     customer and focus on visible functionality
+                        -Derived from implemented user stories
+        -Kanban
+            -Think Jira board
+            -Made by Toyota
+            -Depends on six core practices
+                -Visualizing workflow via Kanban board
+                -Limiting the work in progress (WIP) at any given time
+                -Managing workflow to reduce waste by understanding current
+                 value flow
+                -Making progress policies explicit (e.g., reasons for working
+                 on said item and acceptance criteria)
+                -Focusing on continuous improvement by creating feedback loops
+                 driven by process data and effects of changes
+                -Make process changes collaboratively and involve all team
+                 members and stakeholders as needed
+            -Team meetings are similar to Scrum
+                -Standup driven by "walking the board"
+                    -Leadership rotates between team members
+                -Process measurements are examined during weekly retrospectives
+        -DevOps
+            -Combines devlopment and operations
+            -Key points
+                -Continuous Development
+                    -Software deliverable are broken down and developed in
+                     multiple sprints, with increments being delivered to QA
+                     members for testing
+                -Continuous Testing
+                    -Automated testing tools are used to help team members test
+                     multiple code increments at the same time, eases pain of
+                     integration
+                -Continuous Integration
+                    -Code pieces with new functionality are added to existing
+                     code and to the run-time environment to be checked and
+                     ensured that no errors arose
+                -Continuous Deployment
+                    -Integrated code is deployed to production
+                -Continuous Monitoring
+                    -Operations staff (also members of dev team) help to improve
+                     software quality by monitoring performance in production
+            -Enhances customer experience by reacting quickly to changes in
+             needs or desires.
+            -Can increase brand loyalty and market share.
+            -Increases capacity by reducing rework
+
+-Chapter 4 - Recommended Process Model
+    -4.1 - Requirements Definition
+        -Requirements help team understand problem to be solved and what
+         outcomes are important to stakeholders
+        -Requirements engineering
+            -Process of understanding business needs motivating the project and
+             technical issues which constrain it, leading to development of
+             requirements for the project
+        -Tips for best agile requirements definition
+            -1.  Encourage active stakeholder participation by matching
+                 availability and valuing their input
+            -2.  Use simple models to reduce barriers to participation
+            -3.  Take time to explain requirement representation techniques
+            -4.  Adopt stakeholder terminology
+            -5.  Go breadth-first to get a big picture of the project
+            -6.  Allow dev team to refine requirement details "just in time" as
+                 user stories are scheduled to be implemented
+            -7.  Treat list of features like a prioritized list
+            -8.  Collaborate closely with shareholders
+            -9.  Question the need to maintain models and documents that will not
+                 be used in the future
+            -10. Make sure to have management support and resource availbility
+                 during planning
+        -Impossible for stakeholders to describe and entire system before seeing
+         the working software
+        -Difficult for stakeholders to describe quality requirements before
+         seeing it in action
+        -Get stakeholders to define acceptance criteria for each story
+        -Prototypes are good and shareholders can reference them to describe
+         desired changes
+    -4.2 - Preliminary Architectural Design
+        -Preliminary design decisions must often be made as requirements are defined
+        -Four key elements
+            -1. Focus on key quality attribute and incorporate them into
+                prototypes
+            -2. Keep in mind that successful software products combine
+                customer-visible features and infra when planning prototypes
+            -3. Agile architecture enables code maintainability and evolvability
+                if sufficient attention is paid to architectural decisions and
+                related quality issues
+            -4. Continuous managing and synching of dependencies between
+                functional and architectural requirements is necessary to ensure 
+                that architectural foundations will be ready for future
+                increments
+        -Software architecture decision making is critical to the success of a
+         software system
+        -Documentation can assist in process improvement activities
+    -4.3 - Resource Estimation
+        -Hard to estimate time to complete a project in spiral or agile
+         prototyping
+        -How an experienced software project manager may estimate a project using the agile spiral method proposed
+            -1. Use historic data and work as a team and estimate necessary days
+                per story
+            -2. Loosely organize stories that will make up each sprint
+            -3. Sum the number of days to complete each sprint
+            -4. Revise estimate as requirements are added or prototypes are
+                delivered and accepted by stakeholders
+        -Initial estimates based on requirements are typically adequate but not
+         always accurate
+    -4.4 - First Prototype Construction
+        -Identify features and functions necessary
+        -Decide how much time will be used for first prototype
+        -Engineers at NI came up with the following framework
+            -1. Transition from paper prototype to software design
+            -2. Prototype a user interface
+            -3. Create a virtual prototype
+            -4. Add input and output to prototype
+            -5. Engineer algorithms
+            -6. Test prototype
+            -7. Prototype with deployment in mind
+        -Paper prototypes are often easier, cheaper, faster, and as effective as
+         software in terms of getting feedback from stakeholders
+    -4.5 - Prototype Evaluation
+        -Several tips
+            -1. Provide scaffolding
+                -e.g.: "I like, I wish, What if?" framework to get real user
+                 feedback because people hate to say they don't like something
+                 to your face
+            -2. Test prototype on the right people
+                -Important to mix users (e.g., novice, typical, and advance) to get better feedback
+                -Developers should not do all the testing
+            -3. Ask the right questions
+                -Ask specific questions about new features
+                -Implies all stakeholders agree on prototype objectives
+            -4. Be neutral when presenting alternatives
+                -Let users know that you haven't made up your mind that there is
+                 only one way to do things
+            -5. Adapt while testing
+                -Keep flexible mindset while users are working with prototype
+                -Altering test plan or making quick changes is not off the table
+                -Goal is to get the best feedback possible, helps decide whether
+                 or not to build the next prototype
+            -6. Allow user to contribute ideas
+                -Means what it says
+    -4.6 - Go, No-Go Decision
+        -Following prototype, stakeholders must decide whether or not to
+         continue development
+        -Risk assessment is used to determine whether current state of prototype
+         will suffice
+    -4.7 - Prototype Evolution
+        -Following prototype review, it's time to consider development of the
+         next prototype
+        -Collect all feedback and data from current prototype
+        -Negotiate with stakeholders to plan creation of next prototype
+        -After agreeing on new features, consider known time and budget
+         constraints as well as technical feasibility of implementing the
+         prototype
+        -If development risks are acceptable, work continues
+        -Prototype scope must be redetermined
+            -Developers either:
+                -Select features to develop within the time allocated to a
+                 sprint
+                -allocate sufficient time to implement the features needed to
+                 satisfy the goals set by developers with stakeholder input
+            -In XP, stakeholders and devs work together to group stories into
+             the plan for the next prototype that will become the next release
+             and determine its completion date
+            -In Kanban, developers and stakeholders make use of a board that
+             allows them to focus on the completion status of each user story
+                -Visual reference that can be used to assist developers using
+                 any incremental prototype process model to plan and monitor the
+                 progress of software development
+        -New prototype must be constructed
+            -Same as previous construction, but user stories must be implemented
+             with respect to previously accepted and implemented components
+            -Important to make design decisions that will make the prototype
+             more easily extensible in the future
+            -Temptation to overdesign must be resisted though
+            -Limit documentation to what is needed during development or when
+             changes must be made in the future
+        -Testing new prototypes
+            -Relatively straightforward if dev team created test cases during
+             the design process
+            -Each user story should have acceptance criteria attached as it was
+             created
+                -Also guides creation of test cases
+            -One additional concern is to ensure that adding new features
+             doesn't break old features
+                -Regression testing is the process of verifying that software
+                 that was previously developed and tested still performs the
+                 same after it has been changed
+    -4.8 - Prototype Release
+        -Can be tricky for developers to know when a product is ready for
+         release to customers
+            -Releasing buggy software to users is bad
+        -User acceptance tests are based on the agreed-upon acceptance criteria
+         that was recorded as each user story was created and added to the
+         product backlog
+        -Functional and nonfunctional tests should be used
+            -Functional
+                -Product functionality works as intended
+            -Nonfunctional
+                -Performance is adequate, typically conforming to some benchmark
+            -Testing can't ensure that software is bug-free, only that the test
+             cases ran correctly
+        -User feedback should be organized by user-visible functions as
+         portrayed via the user interface
+            -Changes to UI should be done if changes don't interfere with the
+             release of the prototype
+        -Issue tracking and bug reporting software should be used to capture
+         testing results
+            -Examples
+                -Bugzilla, bug reporting
+                -Jira, issue tracking
+        -Developers need to assess whether changes can be made to the software
+         without casuing a cost overrun or late product delivery
+        -Collected issues and lessons learned should be documented and
+         considered by both developers and stakeholders during the project
+         postmortem
+    -4.9 - Maintain Release Software
+        -Maintenance
+            -The activities related to keep software relational following
+             acceptance and delivery in the end-user environment
+            -Continues for life of software product
+            -Some engineers believe that the majority of the money spent on a
+             software product will be spent on maintenance activities
+        -Corrective
+            -Reactive modifications made to repair problems discovered after
+             the product is released
+            -21%
+        -Adaptive
+            -Reactive modifications made to keep the software usable in a
+             changing end-user environment
+             -25%
+        -Perfective
+            -Proactive modification made after delivery to provide new user
+             features, better code structure, or improved documentation
+            -50%
+        -Preventive
+            -Proactive modification of software after delivery to detect and
+             correct faults before they are discovered by users in the field
+            -4%
+        -Reactive maintenance is also known as firefighting
+        -As agile evolutionary process models release working partial solutions,
+         much of the engineering work done is preventive or perfective as new
+         features are added to the evolving software system
+        -Although tempting to think that maintenance is handled via another
+         trip around the spiral, much of the reactive work has to be done
+         quickly. 
+    -TL;DR:
+        -See bottom of 4.9 in book
+-Chapter 5 - Human Aspects of Software Engineering
+    -Intro
+        -Software engineering has many techniques, tools, and methods to improve
+         the software development process and the final product
+        -Software is not just the product of well-applied technical solutions
+        -Software is:
+            -Developed by people
+            -Used by people
+            -Supports interaction among people
+        -Human characteristics, behavior, and cooperation are central to
+         practical software development
+        -PEOPLE build computer software
+            -Human aspects of SWE often have as much to do with the success of a
+             project as the latest/greatest tech
+        -Individuals and teams do SWE work
+            -In most cases, a team does the work
+            -Rarely, one person has much of the responsibility
+        -A software team will only be successful if the team dynamics are right
+        -Steps
+            -Emulate personal characteristics of successful software engineers
+            -Appreciate complex psychology of SWE work so that you can navigate
+             your way through a project without peril
+            -Understand the structure and dynamics of software teams
+            -Appreciate the impact of social media, cloud, and other
+             collaborative tools
+        -What is the work product of this?
+            -Better insight into the:
+                -people
+                -process
+                -product
+        -How to know you've done it right
+            -Spend time observing how successful software engineers do their
+             work and tune your approach to take advantage of the strengths they
+             project
+    -5.1 - Characteristics of a Software Engineer
+        -Obviously (will be discussed later):
+            -master technical stuff
+            -learn skills to understand the problem
+            -design effective solution
+            -build the software
+            -test it
+            -manage change
+            -communicate with stakeholders
+            -use appropriate tools as needed
+        -Other equally important things
+            -The human aspects
+        -Erasmus has seven traits for software engineers with
+         "superprofessional" behavior
+            -Individual Responsibility
+                -drive to deliver on promises made to:
+                    -peers
+                    -stakeholders
+                    -management
+                -do what needs to be done when it needs to be done
+                -overriding effort to achieve a successful outcome
+            -Acute awareness
+                -aware of the needs of:
+                    -team members
+                    -stakeholders requesting changes
+                    -managers with overall control of project
+                -observes environment in which people work
+                -adapts behavior to account for what has been observed
+            -Brutally honest
+                -points out flaws in constructive but honest manner
+                -opts to be realistic and truthful instead of distorting fact
+                 about schedules, features, performance, or other
+                 product/project characteristics
+            -Resillience under pressure
+                -SWE is always on the edge of chaos
+                -Pressure comes in many forms:
+                    -changes in requirements and priorities
+                    -demanding stakeholders
+                    -overbearing managers
+                -Manages pressure so his performance does not suffer
+            -Heightened sense of fairness
+                -Gladly shares credit with her colleagues
+                -avoids conflicts of interest
+                -never acts to sabotage work of others
+            -Attention to detail
+                -Does not imply an obsession with perfection
+                -carefully considers broader criteria that have been established
+                 for the product and project when making his daily technical
+                 decisions
+                    -e.g. for criteria:
+                        -performance
+                        -cost
+                        -quality
+            -Pragmatic
+                -Recognizes that SWE is not a religion in which dogmatic rules
+                 must be followed
+                -SWE is instead a discipline that can be adapted based on the
+                 circumstances at hand
+    -5.2 - Psychology of Software Engineering
+        -Curtis and Walz suggest a layered behavioral model for software
+         development
+            -Individual Level
+                -SWE psychology focuses on recognition of the problem to be
+                 solved, the problem-solving skills required to solve it, and
+                 the motivation to complete the solution within the constraints
+                 established by outer layers in the model
+            -Team and Project Levels
+                -Group dynamics become dominating factor
+                -Team structure and social factors govern success
+                -Group communication, collaboration, and coordination are as
+                 important as the skills of an individual team member
+            -Outer Levels (Company, Business Milieu)
+                -Organizational behavior governs the actions of the company and
+                 its response to the business milieu
+    -5.3 - The Software Team
+        -From "Peopleware" by Tom DeMarco and Tim Lister regarding the
+         cohesiveness of a software team
+            -"We tend to use the word 'team' loosely in the business world,
+             calling any group of people assigned to work together a 'team.' But
+             many of these groups just don't behave like teams. They may not
+             have a common definition of success or any identifiable team
+             spirit. What is missing is a phenomenon we call 'jell'.
+
+             A jelled team is a group of people so strongly knit that the whole
+             is greater than the sum of the parts. ...
+
+             Once a team begins to jell, the probability of success goes way up.
+             The team can become unstoppable, a juggernaut for success. ... They
+             don't need to be managed in the traditional way, and they certainly
+             don't need to be motivated. They've got momentum."
+        -Demarco and Lister contend that the members of jelled teams are
+         significantly more productive and motivated than average.
+            -They share a common goal, common culture, and, in many cases, a
+             "sense of eliteness" that makes them unique
+        -No foolproof method for creating a jelled team
+        -Attributes normally found in an effective software team
+            -Sense of purpose
+            -Sense of involvement
+            -Sense of trust
+                -Team members must trust the skills and competence of their
+                 peers and managers
+            -Sense of improvement
+                -Periodically reflecting on its approach to SWE and looking for
+                 ways to improve their work
+            -Diverse
+                -combine a variety of different skillsets
+                -Highly-skilled technologists are complemented by less-technical
+                 members who may be more empathetic to the needs of stakeholders
+        -Not all teams are effective and not all teams jell
+        -Many teams suffer from "team toxicity" (Jackman)
+        -Five factors that "foster a potentially toxic team environment"
+            -Frenzied work atmosphere
+            -High frustration that causes friction among team members
+            -"Fragmented or poorly coordinated" software process
+            -Unclear definition of roles on the software team
+            -"Continuous and repeated exposure to failure"
+        -To avoid a frenzied work environment:
+            -team should have access to all information required to do the job
+            -major goals and objectives, once defined, should not be modified
+             unless absolutely necessary
+        -Team can avoid frustration if it is given as much responsibility for
+         decision making as possible
+        -Inappropriate processes can be avoided by understanding the product to
+         be built and allowing the team to select the process model
+        -Team should establish its own mechanisms for accountability
+            -Technical reviews are a good way to do this
+        -Series of corrective approaches when a member of the team fails to
+         perform should be defined
+        -Key to avoiding an atmosphere of failing is to establish team-based
+         techniques for feedback and problem solving
+        -Software teams often struggle with the differing human traits of its
+         members
+            -Recognition of human differences, along with the other presented
+             guidelines provide a higher likelihood of creating teams that jell
+    -5.4 - Team Structures
+        -Best team stucture depends on organization management style, number of
+         team members and their skill levels, and overall problem difficulty
+        -Mantei describes a number of project factors that should be considered
+         when planning the structure of SWE teams
+            -Problem difficulty
+            -"size" of resultant programs in LOCs or function points
+            -time that the team will stay together
+            -modularity of problem
+            -required quality and reliability of system to be built
+            -rigidity of the delivery date
+            -degree of sociability (communication) required for the project
+        -Agile software development (see previous sections) is an option
+            -individual team member competency is required
+                -low performers would struggle regardless
+        -Good software people can work within the framework of any process
+        -Bottom line is that "people trump process" but even good people can be
+         hampered by an ill-defined process and poor resource support
+        -Agile teams are self-organizing
+            -single team structure is not necessarily maintained
+            -necessary changes are made in response to environment changes or
+             changes in the evolving engineering problem solution
+        -Communication between team members and stakeholders is essential
+    -5.5 - Impact of Social Media
+        -digital communication (email, texting, videoconferencing) have become
+         ubiquitous in SWE work
+            -just substitutes or supplements for face-to-face contact
+        -social media is different
+        -the social media connection can be as important as face-to-face
+         communication
+        -value of social media grows as team size increases and is magnified
+         further when the team is geographically dispersed
+        -social networking tools allow degrees-of-separation connections among
+         software developers and related technologists
+            -can learn about friends of friends who may have knowledge or
+             expertise related to the application domain or the problem to be
+             solved
+            -specialized private networks built on social networks can be used
+             within an organization
+        -privacy and security issues should not be overlooked
+    -5.6 - Global Teams
+        -Globalization is more than transfer of goods and services across
+         international boundaries
+        -increasing number of major software products are build by teams often
+         located in different countries
+        -global software development (GSD) teams have unique challenges include:
+            -coordination
+            -collaboration
+            -communication
+            -specialized decision making
+        -approaches to these challenges are influenced by team structure
+        -Decision making on all software teams is complicated by:
+            -Complexity of problem
+            -Uncertainty and risk associated with the decision
+            -Law of unintended consequences
+                -work-associated decision has an unintended effect on another
+                 project objective
+            -different views of the problem lead to different conclusions about
+             the way forward
+        -GSD team challenges have a profound effect on decision making
+            -distances complicates communication but accentuates need for
+             coordination
+        -barriers and complexity attenuate communication (i.e., signal-to-noise
+         ratio increases)
+-Chapter 6 - Principles that Guide Practice
+    -Intro
+        -Software engineers often depicted as working long hours by themselves
+         to meet impossible deadlines without connecting to other people
+            -dark image of SWE practice
+        -Most software engineers work on teams and frequently interact with
+         stakeholders
+        -In most surveys of technical professionals on the Internet, you will
+         see software engineers listed among those experiencing the greatest
+         satisfaction from their jobs
+        -People who create computer software practice the art/craft/discipline
+         that is software engineering
+        -What is SWE practice?
+        -practice = a collection of concepts, principles, methods, and tools
+         that a software engineers calls upon on a daily basis
+        -Practice allows managers to manage software projects and software
+         engineers to build computer programs
+        -Practice populates a software process model with the necessary
+         technical and management how-to's to get the job done 
+        -Practice transforms a haphazard unfocused approach into something that
+         is more organized, more effective, and more likely to achieve success
+    -6.1 - Core Principles
+        -SWE is guided by a collection of core principles that help in the
+         application of a meaningful software process and the execution of
+         effective software engineering methods
+        -Process Level
+            -core principles establish a philosophical foundation that guides a
+             software team as it performs the framework and umbrella activities
+             and produces a set of software engineering work products
+        -Practice Level
+            -core principles establish a collection of values and rules that can
+             guide you in analyzing a problem, designing a solution,
+             implementing and testing the solution, and ultimately deploying the
+             software so stakeholders can use it
+        -Principles That Guide Process
+            -1. Be Agile
+                -Agile tenets should always guide development
+                -Emphasize economy of action
+                    -Keep technical approach as simple as possible
+                    -Keep work products as concise as possible
+                    -Make decisions locally whenever possible
+            -2. Focus on quality at every step
+                -Exit condition for every activity, action, and task should
+                 focus on quality of the work product that has been produced
+            -3. Be ready to adapt
+                -Don't be dogmatic
+                -adapt approach to constraints
+            -4. Build an effective team
+                -Bottom line is people
+                -Build a self-organizing team that has mutual trust and respect
+            -5. Establish mechanisms for communication and coordination
+                -Lack of communication of important information and coordination
+                 of efforts result in failure
+                -Management issues and must be addressed
+            -6. Manage change
+                -Mechanisms must be established to manage changes
+                    -requests, assessments, approvals, implementation
+                -Can be formal or informal
+            -7. Assess risk
+                -Establish contingency plans
+            -8. Create work products that provide value for others
+                -Only make work products that provide value
+                -Every product will be passed on to someone else
+                -Impart necessary information without ambiguity or omission
+        -Principles That Guide Practice
+            -Main goal:
+                -deliver on-time, high-quality, operational software that 
+                contains functions and features that meets the needs of all
+                stakeholders
+            -Core principles that guide technical work help achieve said goal
+                -They have merit regardless of various chosen techniques
+            -1. Divide and conquer
+                -Analysis and design should emphasize separation of concerns
+                -A large problem is easier to solve if it's subdivided into a
+                 collection of elements (or concerns)
+            -2. Understand the use of abstraction
+                -Simplification of some complex element of a system used to
+                 communicate meaning in a single phrase
+                -Different levels of abstraction may be used
+                    -Each imparting or implying meaning that must be
+                     communicated
+                -Normally, you move from high levels of abstraction to lower
+                 levels
+            -3. Strive for consistency
+                -A familar context makes software easier to use
+                -Consistent elements in a UI design is an example
+            -4. Focus on the transfer of information
+                -Basis of software is information transfer
+                -Information flows across an interface
+                    -Opportunities for errors, omissions, and ambiguity
+                -Pay special attention to the analysis, design, construction,
+                 and testing of interfaces
+            -5. Build software that exhibits effective modularity
+                -Separation of concerns establishes a philosophy for software
+                -Modularity provides a mechanism for realizing the SoC
+                 philosophy
+                -Modularity must be effective
+                    -Each module should focus exclusively on one
+                     well-constrained aspect of the system
+                    -Modules should be connected in a relatively simple manner
+                     to other modules, to data sources, and to other
+                     environmental aspects
+            -6. Look for patterns
+                -Software engineers use patterns as a mean of cataloging and
+                 reusing solutions to problems they have encountered in the past
+                -The use of these design patterns can be applied to wider
+                 systems engineering and systems integration problems by
+                 allowing components to evolve independently
+            -7. When possible, represent the problem and its solution from
+                several different perspectives
+                -When a problem and its solution are examined from different
+                 perspectives, it is more likely that greater insight will be
+                 achieved and that errors and omissions will be uncovered
+                -UML is a means to describe a problem and solution from multiple
+                 viewpoints
+            -8. Remember that someone will maintain the software
+                -Over time, software will be:
+                    -corrected as defects are uncovered
+                    -adapted as its environment changes
+                    -enhanced as stakeholders request more capabilities
+                -The maintenance can be facilitated if solid SWE practice is
+                 applied throughout the software process
+    -6.2 - Principles that Guide Each Framework Activity
+        -Communication Principles
+            -Requirements, firstly, must be gathered via communication
+            -Effective communication is challenging
+            -1. Listen
+                -Just listen to the person, don't be contentious
+            -2. Prepare before you communicate
+                -Understand the problem before meeting with others
+                -Prepare an agenda
+            -3. Someone should facilitate the activity
+                -Every communication meeting should have a leader to:
+                    -keep the conversation moving in a productive direction
+                    -mediate any conflicts that occur
+                    -ensure that other principles are followed
+            -4. Face-to-face communication is best
+                -Works best when some other representation of relevant
+                 information is present
+            -5. Take notes and document decisions
+                -Someone should serve as "recorder" and write down all important
+                 points and decisions
+                -Helps information not fall into the cracks
+            -6. Strive for collaboration
+            -7. Stay focused; modularize your discussion
+            -8. If something in unclear, draw a picture
+            -9a. Once you agree to something, move on
+            -9b. If you can't agree to something, move on
+            -9b. If a feature or function is unclear and cannot be clarified
+                 right now, move on
+                -For 9a-9b:
+                    -Endless iteration is pointless
+                    -Many topics require dicussion
+                    -"Moving on" is sometimes the best way to achieve
+                     communication agility
+            -10. Negotiation is not a contest or a game. It works best when both
+                 parties win.
+                -Negotiation with stakeholders is often necessary
+                    -Functions and featues
+                    -Priorities
+                    -Delivery dates
+                -If the team has collaborated well, all parties have a common
+                 goal
+                -Negotiation will demand compromise from all parties
+        -Planning
+            -Set of management and technical practices that enable the software
+             team to define a road map as it travels toward its strategic goal
+             and tactical objectives
+            -Impossible to know how a software project will evolve
+            -No easy way to determine ahead of time:
+                -Technical problems
+                -Important information that will be uncovered later
+                -Misunderstandings
+                -Change in business issues
+            -Planning is often iterative
+        -Modeling
+            -Models are created to gain a better understanding of the actual
+             entity to be built
+            -Software models are different from models for physical objects
+                -Must be capable of representing the information that software
+                 transforms
+                -the architecture and functions that enable transformations
+                -features
+                -behavior of the system as the transformation is happening
+            -Models must do these at different levels of abstraction
+                -From customer's viewpoint down to technical details
+            -Two types of SWE models
+                -Requirements models (aka analysis models)
+                    -Represent customer requirements
+                    -Depicts software in 3 domains
+                        -Information
+                        -Functional
+                        -Behavioral
+                -Design models
+                    -Represents characteristics of the software that help
+                     practitioners to construct it effectively
+                        -architecture
+                        -user interface
+                        -component-level detail
+        -Construction
+            -Set of coding and testing tasks that lead to operational software
+             that is ready for delivery to customer or end user
+            -In modern SWE work, coding may be:
+                -direct creation of programming language source code
+                -automatic generation of source code using an intermediate
+                 design-like representation of the component to be built
+                -automatic generation of executable code using a
+                 fourth-generation programming language (e.g., visual scripting
+                 languages such as Unreal4 Blueprints)
+            -Intiial focus of testing is at the component level
+                -aka unit testing
+            -Other levels of testing:
+                -integration
+                    -conducted as system is constructed
+                -validation
+                    -assesses whether requirements have been met for the
+                     complete system
+                -acceptance testing
+                    -conducted by customer in an effort to exercise all required
+                     features and function
+        -Deployment
+            -Getting product to customer or end user
+            -Don't get client expectations too high
+-Chapter 7 - Understanding Requirements
+    -Intro
+        -Understanding problem requirements is very difficult
+    -7.1 - Requirements Engineering
+        -Requirements Engineering
+            -Term for the broad spectrum of tasks and techniques that lead to an
+             understanding of requirements
+        -Requirements Engineering builds a bridge to design and construction
+        -Seven Req. Eng. tasks (with sometimes muddy boundaries)
+            -*Inception
+                -How does a software project get started?
+                -Establish basic understanding of the problem, the people who
+                 want a
+                 solution, and the nature of the solution that is desired
+                -Communication between both parties needs to be established
+            -*Elicitation
+                -Ask customers, users, and others what the objectives for the
+                 system or product are, what is to be accomplished, how the
+                 system or product fits into the needs of the business, and how
+                 the system or product is to be used on a day-to-day basis
+                -Very hard
+                -Understand business goals (long-term aim that a system or
+                 product must achieve)
+                -Agility is important
+            -*Elaboration
+                -Developing a refined requirements model that identifies various
+                 aspects of software function, behavior, and information
+                -Uses user scenarios from eliciation
+                -Analysis classes extracted
+                    -business domain entities that are visible to the end user
+            -*Negotiation
+                -Elimination, combination, or modification of requirements so
+                 that each part achieves some measure of satisfaction
+            -*Specification
+                -Specifies and codifies requirements
+                -Written document, set of graphical models, collection of usage
+                 scenarios, a prototype, or some combination
+                -"Standard template" suggested, but specification needs vary by
+                 size and complexity of project (among other factors)
+            -*Validation
+                -Work products produced are assessed for quality
+                -Primary mechanism is the technical review
+                -Examining specification for errors in content or
+                 interpretation, areas where clarification may be required,
+                 missing information, inconsistencies, conflicting
+                 requirements, or unrealistic requirements
+                -e.g., adding concrete times to requirements
+            -*Management
+                -Set of activities that help the team identify, control, and
+                 track requirements and changes to requirements at any time as
+                 the project proceeds
+    -7.2 - Establishing the Groundwork
+        -*Identifying Stakeholders
+            -Stakeholder
+                -Anyone who benefits in a direct or indirect way from the system
+                 which is being developed
+            -Create list of people who will contribute input as requirements
+             are elicited
+            -Inital list will grow
+        -*Recognizing Multiple Viewpoints
+            -People will have conflicting views on the system
+            -Categorize all stakeholder information (including inconsistent and
+             conflicting requirements) in a way that will allow decision makers
+             to choose and internally consistent set of requirements for the
+             system
+        -*Working Toward Collaboration
+            -Everyone may have different opinions about the proper set of
+             requirements
+            -Req. Eng. job is to indentify areas of commonality (agreement) and
+             areas of conflict or inconsistency (disagreement)
+            -Disagreement may be resolved by either a committee ("defined by
+             committee") or by a single senior employee ("project champion")
+        -Asking the First Questions
+            -Questions asked at inception should be "context free" or focusing
+             on overall goals and benefits 
+                -"What will be the economic benefit of a successful solution?"
+            -Next set should give better understanding of problem and allows
+             customer to voice their perceptions about solution
+                -"What problem(s) will this solution address?"
+            -Final set focuses on effectiveness of communication activity itself
+                -"Meta-questions"
+                -"Am I asking too many questions?"
+        -Nonfunctional Requirements
+            -Nonfunction requirement (NFR)
+                -a quality attribute, performance attribute, security attribute,
+                 or a general constraint on a system
+            -Two-phase approach 
+                -First phase
+                    -set of SWE guidelines established for the system to be
+                     built
+                    -address best practice, but also architectural style
+                -Second phase
+                    -list of NFRs created
+                    -team prioritizes each nonfunctional requirement by creating
+                     a homogeneous set of NFRs using a set of decision rules
+                     that establish which guidelines to implement and which to
+                     reject
+        -Traceability
+            -Traceability
+                -SWE term referring to documented links between SWE work
+                 products
+            -Traceability Matrix
+                -allows a Req. Eng. to represent the relationship between
+                 requirements and other SWE work products
+                -more difficult as requirments and work products increase
+    -7.3 - Requirements Gathering
+        -Requirements Gathering
+            -combines elements of problem solving, elaboration, negotiation,
+             and specification
+            -stakeholders work together to:
+                -identify the problem
+                -propose elements of the solution
+                -negotiate different approaches
+                -specify a preliminary set of solution requirements
+        -Collaborative Requirements Gathering
+            -Basic Guidelines
+                -*Meetings are conducted and attended by both SWEs and other
+                 stakeholders
+                -Rules for preparation and participation are established
+                -*Agenda is suggested that is formal enough to cover all
+                 important points but informal enough to encourage the free
+                 flow of ideas
+                -*Facilitator (customer, develper, or outsider) controls the
+                 meeting
+                -A "definition mechanism" (worksheets, flop charts, wall
+                 stickers, electronic bulletin board, chat room, or virtual
+                 forum) is used
+            -Goal is to identify the problem, propose elements of the solution,
+             negotiate different approaches, and specify a preliminary set of
+             solution requirements
+            -"Product request" generated during inception
+            -Meeting time, place, and date are selected
+            -Facilitator is chosen
+            -Attendees from the software team and other stakeholder orgs are
+             invited to participate
+        -Usage Scenarios
+            -A set of scenarios are generated to identify a thread of usage for
+             the system to be constructed
+                -often called "use cases"
+                -provide a description for how the system will be used
+        -Elicitation Work Products
+            -Work products produced will vary depending on size of the system
+             or product to be built
+            -May include:
+                -*Statement of need and feasbility
+                -*Bounded statement of scope for the system or product
+                -List of customers, users, and other stakeholders who
+                 participated in requirements elicitation
+                -Description of system's technical environment
+                -List of requirements and domain constraints that apply to each
+                -*a set of usage scenarios
+            -All work products reviewed by all who participated in requirements
+             eliciation
+        -NFR concerns
+            -*"Can the system be built?"
+            -*"Can we get the system to market in time?"
+            -*"Will the system's performance meet customer needs?"
+    -7.4 - Developing Use Cases
+        -Use Case
+            -Tells story about how end user interacts with the system under a
+             specific set of circumstances
+        -Define "actors"
+            -People (or devices) that use the system or product
+            -Anything that communicates with the system or product
+        -Primary Actor
+            -Interact to achieve required system function and derive the
+             intended benefit from the system
+            -work directly and frequently wiht the software
+        -Secondary Actor
+            -support the system so that primary actors can do their work
+        -Questions answered by use case
+            -"Who is the primary actor, the secondary actor(s)?"
+            -"What are the actor's goals?"
+            -"What information does the actor desire from the system?"
+    -7.5 - Building analysis model 
+        -Analysis model
+            -snapshot of requirements at any given time
+            -expected to change
+        -Elements of the Analysis Model
+            -Scenario-based
+                -describe the system from a user's point of view
+                -may evolve into more elaborate template-based use cases
+                -serve as input for creation of other modeling elements
+                -UML: Sequence, State
+            -Class-based
+                -Objects manipulated as actor interacts with system
+                -Characterized into classes
+                    -UML can be used
+                -UML: Class 
+            -Behavioral
+                -Depicts behavior
+                -State diagram can be used
+                -UML: State, activity, swimlane
+        -Analysis Patterns
+            -analysis patterns
+                -suggest solutions within the application domain that can be
+                 reused when modeling many applications
+                -integrated into analysis model by reference to pattern name
+    -7.6 - Negotiating Requirements
+        -Strive for "win-win" result
+        -Intent is to develop a plan to meet stakeholder needs while reflecting
+         real-world constraints
+    -7.7 - Requirements Monitoring
+        -Incremental development is commonplace
+            -Use cases evolve
+            -test cases are developed for each new software increment
+            -CI of source code
+        -Five Tasks
+            -*Distributed debugging
+                -uncovers error and causes
+            -*Run-time verification
+                -determines whether software matches specs
+            -*Run-time validation
+                -assesses whether evolving software meets user goals
+            -Business activity monitoring
+                -evaluates whether a system satisfies business goals
+            -Evolution and codesign
+                -provides information to stakeholders as system evolves
+    -7.8 - Validating Requirements
+        -*"Is every requirement essential to product objectives?"
+        -*"Is each requirement bounded and unambiguous?"
+        -*"Is each requirement testable?"
+-Chapter 8 - Requirements Modeling - A Recommended Approach
+    -Requirements Analysis
+        -Results in specification of software's operation characteristics,
+         indicates software's interface with other system elements, and
+         establishes constraints that software must meet
+        -Allows elaboration on basic requirements
+        -Results in one or more of the following types of models:
+            -*Scenario-based
+            -*Class-oriented
+            -*Behavioral
+            -Data
+            -Flow-oriented
+        -Overall objectives and philosophy
+            -Focus on what, not how
+        -Analysis Rules of Thumb
+            -Focus on problem while keeping level of abstraction high
+            -Recognize that analysis model should provide insight into:
+                -information domain
+                -function
+                -behavior of software
+            -Delay a consideration of software architecture and nonfunctional
+             details until later in the modeling activity
+            -Remain aware of ways in which elements are interconnected
+        -Requirements modeling principles
+            -1. Information domain of a problem must be represented and
+                understood
+            -2. *Functions that the software performs must be defined
+            -3. *Behavior of the software (as a consequence of external events)
+                must be represented
+            -4. Models that depict information, function, and behavior must be
+                partitioned in a manner that uncovers detail in a layered (or
+                hierarchical) fashion
+            -5. *Analysis task shuld move from essential information toward
+                implementation detail
+    -Scenario-Based Modeling
+        -UML good
+        -Actors and User Profiles
+            -UML actor
+                -models an entity that interacts with a system object
+            -UML profile
+                -provides a way to extend an existing model to other domains or
+                 platforms
+        -Creating Use Cases
+            -*Not sure
+        -Documenting Use Cases
+            -UML is good but has limitations
+                -only as good as its authors
+            -Use case focuses on function and behavioral requirements and is
+             generally inappropriate for nonfunctional requirements
+            -Scenario-based modeling is appropriate for a significant majority
+             of all situations you will encounter as a SWE
+        -Questions to be asked:
+            -*"Can the actor take some other action at this point?"
+            -*"Is it possible that an error will occur?"
+            -*"Can poor system performance result in unexpected or improper
+               user actions?"
+        -Formal use case outline
+            -*Goal in context
+            -*Precondition
+            -*Trigger
+            -*Scenario
+            -*Exceptions
+    -Class-Based Modeling
+        -Identifying Analysis Classes
+            -Manifest themselves in one of the following ways
+                -*External entities
+                    -Produce or consume information to be used by a
+                     computer-based system
+                -Things
+                    -Part of information domain for the problem
+                -*Occurances or events
+                    -occur within context of system operation
+                -*Roles
+                    -Played by people who interact with the system
+                -Organizational Units
+                    -Relevent to an application
+                -Places
+                    -establish context of the problem and overall function of
+                     the system
+                -Structures
+                    -Define a class of objects or related class of objects
+            -Characteristics to use while considering each potential class for
+             inclusion in the analysis model
+                -*Retained information
+                -Needed services
+                -Multiple attributes
+                -*Common attributes
+                -*Common operations
+                -Essential requirements
+        -Defining Attributes and Operations
+            -Skip
+        -UML Class Models
+            -Skip
+        -Class-Responsibility-Collaborator Modeling
+            -CRC modeling provides a simple means for identifying and
+             organizing classes that are relevant to system or product
+             requirements
+                -Classes
+                    -the thing
+                -Responsibilites
+                    -attribute and operations relevant for the class
+                -Collaborators
+                    -classes that provide the class with the information needed
+                     or action required to complete a responsibility
+                    -Class can also use its own operations to manipulate its
+                     attributes
+    -Functional Modeling
+        -Functional model
+            -address two application processing elements
+                -user-observable functionality delivered by the app to end
+                 users
+                -operations contained within analysis classes that implement
+                 behaviors associated with the class
+        -Procedural View
+            -UML activity diagram adjacent
+                -Flow chart but with extras
+        -UML Sequence Diagrams
+            -Sequence diagram
+                -can be used for behavioral modeling
+                -used to show how events cause transitions from object to
+                 object
+                -representation of how events cause flow from one object to
+                 another as a function of time
+                -shorthand version of the use case
+                -represents key classes and the events that cause behavior to
+                 flow from class to class
+    -Behavioral Modeling
+        -Steps to create:
+            -1. Evaluate all use cases
+            -2. identify events that drive interaction
+            -3. create a sequence for each use case
+            -4. build a state diagram for the system
+            -5. review model
+        -Behavioral Model
+            -indicates how software will respond to internal or external events
+             or stimuli
+        -Identifying Events with the Use Case
+            -Event occurs whenever the system and an actor exchange information
+            -Events are NOT the information that has been exchanged, but rather
+             the fact that information has been exchanged
+        -UML State Diagrams
+            -Two states must be considered
+                -State of each class as the system performs its function
+                -State of the system as observed from the outside as the system
+                 performs its function
+            -Passive vs Active
+                -Passive state
+                    -simply the current values assigned to an object's
+                     attributes
+                -Active state
+                    -indicates the status of the object as it undergoes a
+                     continuing transformation or processing
+                    -an event (sometimes called "trigger") must occur to force
+                     an object to make a transition form one active state to
+                     another
+            -An action occurs concurrently with the state transition or because
+             of it and generally involves one or more operations
+             (responsibilities) of the obejct
+        -UML Activity Diagrams
+            -Supplements the use case by providing a graphical representation
+             of the flow of interaction within a specific scenario
+            -Way of representing how a system reacts to internal events
+            -Swimlanes can also be used to model concurrent behaviors
+            -Use cases are procedurally oriented, much like activity and
+             swimlane diagrams
+-Chapter 9 - Design Concepts
+    -Intro
+        -Design Principles
+            -Establish an overriding philosophy that guides the design work you
+             must perform
+        -Design concepts
+            -Must be understood before the mechanics of design practice are
+             applied
+        -Design practice
+            -leads to the creation of various representations of the software
+             that serve as a guide for the construction activity that follows
+    -9.1 - Design Within the Context of Software Engineering
+        -Software design sits at the technical kernel of SWE and is applied
+         regardless of the software process model that is used
+        -software design is the last SWE action within modeling and sets the
+         stage for construction
+    -9.2 - The Design Process
+        -Software design is an iterative process in which requirements are
+         translated into a "blueprint" for constructing the software
+        -Iterations lead to lower and lower levels of abstraction
+        -Three characteristics of good design:
+            -design should implement all explicit requirements contained in
+             requirements model and must accommodate all implicit requirements
+             desired by stakeholders
+            -design should be a readable, understandable guide for those who
+             generate code and for those who test and subsequently support the
+             software
+            -design should provide a complete picture of the software,
+             addressing the data, functional, and behavioral domains from an
+             implementation perspective
+        -Quality Guidelines
+            -1. Design should exhibit an architecture that:
+                -a. has been created using recognizable architectural styles or
+                    patterns
+                -b. composed of components that exhibit good design
+                    characteristics
+                -c. can be implemented in a evolutionary fashion
+            -2. design should be modular (software is logically partitioned
+                into elements or subsystems)
+            -3. design should contain distinct representations of data,
+                architecture, interfaces, and components
+            -4. design should lead to data structures appropriate for the
+                classes to be implemented and are drawn from recognizable data
+                patterns
+            -5. design should lead to components that exhibit independent
+                functional components
+            -6. should lead to interfaces that reduce the complexity of
+                connections between components and with the external
+                environment
+            -7. should be derived using a repeatable method that is driven by
+                information obtained during software req. analysis
+            -8. should be represented using a notation that effectively
+                communicates its meaning
+        -Variability-intensive systems
+            -refers to systems that may be required to be self-modifying based
+             on changes in the run-time environment or families of software
+             products resulting from product line engineering practices for
+             building specialized product variants out of existing software
+             products
+        -Common design method characteristics
+            -1. mechanism for the translation of the req. model into a design
+                representation
+            -2. a notation for representing functional components and their
+                interfaces
+            -3. heuristics for refinement and partitioning
+            -4. guidelines for quality assessment
+        -Generic Task Set for Design
+            -TODO: come back to this? maybe?
+    -9.3 - Design Concepts
+        -Procedural abstraction
+            -refers to a sequence of instructions that have a specific and
+             limited function
+        -Data abstraction
+            -named collection of data that describes a data object
+        -Procedural abstractions make use of data abstractions
+        -Software architecture
+            -Alludes to the overall structure of the software and the ways in
+             which that structure provides conceptual integrity for a system
+        -Structural properties
+            -define the components of a system (e.g., modules, objects,
+             filters) and the manner in which those components are packaged and
+             interact with one another
+        -Extra-functional properties
+            -Address how the design architecture achieves requirements for
+             performance, capactiy, reliability, security, adaptability, and
+             other system characteristics (e.g., nonfunctional system
+             requirements)
+        -Families of related systems
+            -Draw upon repeatable patterns that are commonly encountered in the
+             design of families of similar systems
+        -Structural models
+            -Represent architecture as an organized collection of program
+             components
+        -Framework models
+            -increase the level of design abstraction by attempting to identify
+             repeatable architectural design frameworks that are encountered in
+             similar types of applications
+        -Dynamic models
+            -Address the behavioral aspects of the program architecture,
+             indicating how the structure or system config may change as a
+             function of external events
+        -Process models
+            -focus on the design of the business or technical process that the
+             system must accommodate
+        -Functional models
+            -represent the functional hierarchy of a system
+        -Architectural Description Languages (ADLs)
+            -used to represent the above models
+            -many proposed
+            -provide mechanisms for describing system components and ways in
+             which they are connected to one another
+        -Design pattern
+            -named nugget of insight which conveys the essence of a proven
+             solution to a recurring problem within a certain context amidst
+             competing concerns
+            -solves a well-defined design problem within a specific context and
+             amid "forces" that may have an impact on the manner in which the
+             pattern is applied and used
+        -Design pattern provide description that enables designer to determine
+            -1. whether the pattern is applicable to the current work
+            -2. whether the pattern can be reused
+            -3. whether the pattern can serve as a guide for developing a
+                similar, but functionally or structurally different, pattern
+        -Separation of concerns
+            -design concept
+            -suggests that any complex problem can be more easily handled if it
+             is subdivided into pieces that can each be solved and/or optimized
+             independently
+        -Concern
+            -feature or behavior that is specified as part of the requirements
+             model for the software
+        -Modularity
+            -most common manifestation of separation of concerns
+            -software is divided into separately named and addressable
+             components, sometimes called modules, that are integrated to
+             satisfy problem requirements
+            -modularity is the single attribute of software that allows a
+             program to be intellectually manageable
+            -more modules == more better
+        -Information Hiding
+            -suggests that modules should be characterized by design decisions
+             that each hides from all others
+            -modules should be specified and designed so that information
+             (algorithms and data) contained within a module is inaccessible to
+             other modules that have no need for such information
+        -Functional independence
+            -achieved by developing modules with "single-minded" function and
+             an "aversion" to excessive interaction with other modules
+        -Independence is assessed with cohesion and coupling
+        -Cohesion
+            -indication of the relative functional strength of a module
+            -cohesive modules perform a single task, requiring little
+             interaction with other components in other parts of a program
+            -Single Responsibility Principle
+            -high cohesion == good
+        -Coupling
+            -indication of the interconnections among modules in a software
+             structure
+            -depends on interface complexity between modules
+            -low coupling == good
+        -Stepwise Refinement
+            -top-down design strategy
+            -hierarchy is developed by decomposing a macroscopic statement of
+             function (procedural abstraction) in a stepwise fashion until
+             programming language statements are reached
+            -process of elaboration
+                -more detail provided as each successful refinement
+                 (elaboration) occurs
+        -Abstraction and refinement are complementary concepts
+        -Refactoring
+            -reorganization technique that simplifies the design (or code) of a
+             component without changing its function or behavior
+            -improves internal structure without altering external behavior
+        -Design classes
+            -refine analysis classes by providing design detail that will
+             enable the classes to be implemented and to create a software
+             infrastructure that supports the business solution
+        -Four characteristics of a well-formed design class:
+            -1. Complete and sufficient
+                -should be complete encapsulation of all attributes and methods
+                 that can reasonably be expected to exist for the class
+            -2. Primitiveness
+                -methods associated with a design class should be focused on
+                 accomplishing one service for the class
+                -once the service has been implemented with a method, the class
+                 should not provide another way to accomplish the same thing
+                -orthogonality
+            -3. High Cohesion
+                -See cohesion
+                -Single responsibility
+            -4. Low coupling
+                -See coupling
+                -minimize excessive collaboration
+    -9.4 - The Design Model
+        -Process Dimension
+            -indicated evolution of the design model as design tasks are
+             executed as part of the software process
+        -Abstraction dimension
+            -represents the level of detail as each element of the analysis
+             model is transformed into a design equivalent and then refined
+             iteratively
+        -Elements of a design model use many of the same UML diagrams as the
+         analysis model
+            -diagrams are refined and elaborated though
+            -more implementation-specific detail provided
+        -Design Modeling Principles
+            -1. Design should be traceable to the requirements model
+            -2. Always consider the architecture of the system to be built
+            -3. Design of data is as important as design of processing
+                functions
+            -4. Interfaces (both internal and external) must be designed with
+                care
+            -5. User interface design should be tuned to the needs of the end
+                user
+            -6. Component-level design should be functionally independent
+            -7. Components should be loosely coupled to one another and to the
+                external environment
+            -8. Design representations (models) should be easily understandable
+            -9. The design should be developed iteratively
+            -10. Creation of a design model does not preclude an agile approach
+        -Data Design (aka data architecting)
+            -creates a model of data and/or information that is represented at
+             a high level of abstraction (the customer or user's view of data)
+            -the data model is then refined into progressively more
+             implementation-specific representations that can be processed by
+             the computer based system
+        -Architectural design
+            -equivalent to the floor plan of a house
+            -gives an overall view of the software
+            -usually depicted as a set of interconnected subsystems, often
+             derived from analysis packages within the requirements model
+        -Architectural model derived from three sources:
+            -1. information about the application domain for the software to be
+                built
+            -2. specific requirements model elements such as use cases or
+                analysis classes, their relationships, and collaborations for
+                the problem at hand
+            -3. availability of architectural styles
+        -Interface design for software
+            -analogous to a set of detailed drawings (and specficiations) for
+             the doors, windows, and external utilities of a house
+        -Three important elements of interface design:
+            -1. UI
+            -2. external interfaces to other systems, devices, networks, or
+                other producers of consumers of information
+            -3. internal interfaces between various design components
+        -UI design (aka UX or user experience design)
+            -major SWE action
+            -UX design focuses on usability of the UI design
+            -incorporates carefully chosen aesthetic, ergonomic, and technical
+             elements
+            -unique subsystem within the overall application architecture
+            -provides user with a satisfying user experience
+        -Component-Level Design Elements
+            -fully describes the internal detail of each software component
+            -UML used for object-oriented SWE
+        -Deployment-Level Design Elements
+            -Indicates how software functionality and subsystems will be
+             allocated within the physical computing environment that will
+             support the software
+    -9.5 - Summary
+        -Skip
+-Chapter 10 - Architectural Design - A Recommended Approach
+    -Intro
+        -Design is multistep process
+        -Design is information-driven
+        -Software design methods are derived from consideration of each of the
+         three domains of the analysis model
+    -10.1 - Software Architecture
+        -Software architecture representation enables you to:
+            -1. analyze the effectiveness of the design in meeting its stated
+                requirements
+            -2. consider architectural alternatives at a stage when making
+                design changes is still relatively easy
+            -3. reduce the risks associated with the construction of the
+                software
+        -Three key reasons that software architecture is important
+            -1. software architecture provides a representation that
+                facilitates communication among all stakeholders
+            -2. architecture highlights early design decisions that will have a
+                profound impact on all software engineering work that follows
+            -3. architecture constitutes a relatively small model of how the
+                system components are structured and work together
+        -Blueprint metaphor
+            -devs regard architecture descriptions as a means of transferring
+             explicit information from architects to designers to SWEs charged
+             with producing the system components
+            -most familiar to stakeholders who write programs to implement a
+             system
+        -Language metaphor
+            -views architecture as a facilitator of communication across
+             stakeholder groups
+            -arch. desc. needs to be concise and easy to understand because it
+             forms basis for negotiation
+            -preferred by stakeholders with a high customer focus
+        -Decision metaphor
+            -represents architecture as the product of decisions involving
+             trade-offs among properties such as cost, usability,
+             maintainability, and performance that have resource consequences
+             for the system being designed
+        -Literature metaphor
+            -used to document architectural solutions constructed in the past
+            -supports construction of artifacts and transfer of knowledge
+             between designers and software maintenance staff
+            -supports stakeholders whose concern is reuse of components and
+             designs
+        -Architectural description
+            -represents a system using multiple views
+            -view
+                -representation of a whole system from the perspective of a
+                 related set of stakeholder concerns
+        -Architectural decision record
+            -represents some architectural decision made
+            -could just be title, context, decision, status, and consequences
+    -10.2 - Agility and Architecture
+        -Complex systems require a focus on software architecture, even for
+         agile teams
+        -agile developers need to anticipate architectural elements and implied
+         structure that emerges from the collection of user stories gathered
+        -an architectural prototype (e.g., walking skeleton) and developing
+         explicit architectural work products to communicate the right
+         information to the necessary stakeholders can satisfy the need for
+         architectural design
+        -Storyboarding
+            -Architect contributes architectural user stories to the project
+             and works with the PO to prioritize the architectural stories with
+             the business user stories as sprints are planned
+        -Responsibility-Driven Architecture (RDA)
+            -Process that focuses on when, how, and who should make the
+             architectural decisions on a project team
+            -emphasizes the role of architect as being a servant-leader rather
+             than an autocratic decision make and is consistent with the agile
+             philosophy
+        -Progressive Sign-Off
+            -evolving product is documented and approved as each successive
+             prototype is completed
+    -10.3 - Architectural Styles
+        -Architectural Style
+            -descriptive mechanism to differentiate the "house" from other
+             styles
+            -template for construction
+            -transformation imposed on the design of an entire system
+            -intent is to establish a structure for all components of a system
+        -Software built for computer-based systems exhibits one of many
+         architectural styles
+        -Each style describes a system category that encompasses:
+            -1. a set of components (e.g., a database, computational modules)
+                that perform a function required by a system
+            -2. a set of connectors that enable "communication, coordination,
+                and cooperation" among components
+            -3. constraints that define how components can be integrated to
+                form the system
+            -4. semantic models that enable a designer to understand the
+                overall properties of a system by analyzing the known
+                properties of its constituent parts
+        -Architectural Pattern
+            -imposes transformation on design of an architecture
+            -differs from style in a number of fundamental ways:
+                -1. scope is less broad, focusing on one aspect of the
+                    architecture rather than the architecture in its entirety
+                -2. imposes a rule on the architecture, describing how the
+                    software will handle some aspect of its functionality at
+                    the infrastructure level (e.g., concurrency)
+                -3. tend to address specific behavioral issues within the
+                    context of the architecture (e.g., how real-time
+                    applications handle synchronization or interrupts)
+        -Brief Taxonomy of Architectural Styles
+            -Data-Centered
+                -data store resides at center of architecture and is accessed
+                 frequently by other components that have CRUD functionality
+                -blackboard variation
+                    -notifications sent to client software when data of
+                     interest to the client changes
+                -provide integrability
+                    -existing components can be changed and new client
+                     components can be added without concern about other
+                     clients
+                    -data can be passed among clients using blackboard
+                     mechanism
+            -Data-Flow
+                -applied when input data are to be transformed through a series
+                 of computational or manipulative components into output data
+                -pipe-and-filter pattern
+                    -set of components (filters) connected by pipes that
+                     transmit data from one component to the next
+                    -each filter works independently of those components
+                     upstream and downstream
+                    -each filter designed to expect data input of a certain
+                     form and produces data output (to the next filter) of a
+                     specified form
+                    -filters do not require knowledge of the working of
+                     neighboring filters
+            -Call-and-Return
+                -enables you to achieve a program structure that is relatively
+                 easy to modify and scale
+                -Two substyles:
+                    -Main Program/Subprogram
+                        -decomposes function into a control hierarchy where a
+                         "main" program invokes several program components,
+                         which in turn may invoke still other components
+                    -Remote Procedure Call 
+                        -Components of a main program/subprogram architecture
+                         are distributed across multiple computers on a network
+            -Object-Oriented
+                -components of a system encapsulate data and the operations
+                 that must be applied to manipulate the data
+                -communication/coordination between components are accomplished
+                 via message passing
+            -Layered
+                -number of different layers are defined, each accomplishing
+                 operations that progressively become closer to the machine
+                 instruction set
+                -outer layer handles UI operations
+                -inner layer performs OS interfacing
+                -intermediate layers provide utility services and application
+                 software functions
+                -MVC
+                    -model handles business logic (e.g., DB interactions)
+                    -view contains interface-specific functions and enables the
+                     presentation of content and processing logic required by
+                     the end user
+                    -controller manages access to the model and the view and
+                     coordinates the flow of data between them
+        -Questions for insight into architectural style (one from each)
+            -Control
+                -How is control managed within the architecture?
+            -Data
+                -How are data communicated between components?
+    -10.4 - Architectural Considerations
+        -possible considerations to provide guidance on architecture decisions
+            -Economy
+                -best sfotware is uncluttered and relies on abstraction to
+                 reduce unnecessary detail
+                -avoids complexity caused by unnecessary functions and features
+            -Visibility
+                -architectural decisions and the reasons for them should be
+                 obvious to SWEs who examine the model later
+            -Spacing
+                -separation of concerns in a design is sometimes referred to as
+                 spacing
+                -leads to modular designs, but too much spacing leads to
+                 fragmentation and loss of visibility
+            -Symmetry
+                -implies that a system is consistent and balanced in its
+                 attributes
+                -symmetric designs are easier to understand, comprehend, and
+                 communicate
+                -can be both structural and behavioral
+                -e.g., an open() method needs a corresponding close() method
+            -Emergence
+                -emergent, self-organized behavior and control are often the
+                 key to creating scalable, efficient, and economic software
+                 architectures 
+                -because it's very difficult to plan for every possible
+                 sequence of events, a system architect should create a
+                 flexible system that accommodates this emergent behavior
+    -10.5 - Architectural Decisions
+        -Developer notes
+            -document key design decisions along with their justification
+            -provide reference for new project team members
+            -serve as a repository for lessons learned
+        -Decision view
+            -cuts across several views of information contained in traditional
+             architectural representations
+            -captures both architecture design decisions and their rationale
+        -Service-Oriented Architecture Design (SOAD) modeling
+            -knowledge management framework that provides support for capturing
+             architectural decision dependencies in a manner that allows them
+             to guide future development activities
+        -SOAD guidance model
+            -contains knowledge about architectural decisions required when
+             applying an architectural style in a particular application genre
+            -based on arch. info obtained from completed projects that employed
+             the architectural style in that genre
+            -documents places where design problems exist and arch. decisions
+             must be made, along with quality attributes that should be
+             considered in selecting among potential alternatives
+        -SOAD decision model
+            -documents both arch. decisions required and records the decisions
+             actually made on previous projects along with their justifications
+            -fed by guidance model in a tailoring step that allows the
+             architect to delete irrelevant issues, enhance important issues,
+             or add new issues
+            -can use more than one guidance model
+            -provides feedback to guidance model after project completion
+                -feedback may be accomplished by harvesting lessons learned
+                 from project postmortem reviews
+    -10.6 - Architectural Design
+        -Archetype
+            -abstraction similar to a class
+            -represents one element of system behavior
+        -Architectural Context Diagram (ACD)
+            -models manner in which software interacts with entities external
+             to its boundaries
+        -SafeHome archetypes?
+        -SafeHome top-level components?
+    -10.7 - Assessing Alternative Architectural Designs
+        -Clements et al. on evaluating software architectures
+            -"To put it bluntly, an architecture is a bet, a wager on the
+              success of a system"
+        -Big Question
+            -Will the architectural bet pay off?
+        -SEI Architecture Trade-Off Analysis Method (ATAM) Activities
+         (performed iteratively)
+            -1. Collect Scenarios
+                -develop a set of use cases to represent the system from the
+                 user's point of view
+            -2. Elicit requirements, constraints, and environment description
+                -information is required as part of requirements engineering
+                 and is used to be certain that all stakeholder concerns have
+                 been addressed
+            -3. Describe the architectural styles and patterns that have been
+                chosen to address the scenarios and requirements
+                -should be described using one of the following architectural
+                 views
+                    -Module view
+                        -for analysis of work assignments with components and
+                         the degree to which information hiding has been
+                         achieved
+                    -Process view
+                        -for analysis of system performance
+                    -Data flow view
+                        -for analysis of the degree to which the architecture
+                         meets functional requirements
+            -4. Evaluate quality attributes by considering each attribute in
+                isolation
+                -The number of quality attributes chosen for analysis is a
+                 function of time available for review and the degree to which
+                 quality attributes are relevant to the system at hand
+                -quality attributes for arch. design assessment include:
+                    -reliability
+                    -performance
+                    -security
+                    -maintainability
+                    -flexibility
+                    -testability
+                    -portability
+                    -reuseability
+                    -interoperability
+            -5. Identify the sensitivity of quality attributes to various
+                architectural attributes for a specific architectural style
+                -accomplished by making small changes in the architecture and
+                 determining how sensitive a quality attribute (e.g.,
+                 performance) is to the change
+                -any attributes significantly affected by the change are termed
+                 sensitivity points
+            -6. Critique candidate architectures (developed in step 3) using
+                the sensitivity analysis conducted in step 5
+                -"refers to systems that may be required to be self-modifying
+                 based on changes in the run-time environment or families of
+                 software products resulting from product line engineering
+                 practices for building specialized product variants out of
+                 existing software products."
+            -The above six steps are the first ATAM iteration
+                -based on results of steps 5 and 6, some architecture
+                 alternatives may be eliminated, one or more of the remaining
+                 architectures may be modified and represented in more detail,
+                 and then the ATAM steps are reapplied
+        -Architectural Reviews
+            -Specialized technical review
+            -provide a means to assess the ability of a software arch. to meet
+             the system's quality requirements (e.g., scalability or
+             performance) and to identify any potential risks
+            -have the potential to reduce project costs by detecting design
+             problems early
+            -often only involve the software team supplemented by independent
+             experts
+        -Most common architectural review techniques used in industry:
+            -experience-based reasoning
+            -prototype evaluation
+            -scenario review
+            -use of checklists
+        -Many arch. reviews occur early in the project life cycle
+            -should also occur after new components or packages are acquired in
+             the component-based design
+        -One of the most commonly cited problems facing SWEs when conducting
+         architectural reviews is the lack of or inadequate architectural work
+         products, thereby making review difficult to complete
+        -Pattern-Based Architecture Review (PBAR)
+            -evaluation method based on arch. patterns that leverages the
+             patterns' relationships to quality attributes
+            -well-suited to small, agile teams
+            -require relatively small amount of extra project time and effort
+            -can accommodate changing requirements and short build cycles and
+             help improve the team's understanding of the system architecture
+             due to its short preparation and review time
+        -PBAR steps
+            -1. Identify and discuss the quality attributes most important to
+                the system by walking through the relevant use cases
+            -2. Discuss a diagram of the system's arch. in relation to its
+                requirements
+            -3. Help the reviewer identify the arch. patterns used and match
+                the system's structure to the patterns' structure
+            -4. Using existing docs and past use cases, examine the arch. and
+                quality attributes to determine each pattern's effect on the
+                system's quality attributes
+            -5. Identify and discuss all quality related issues raised by arch.
+                patterns used in the design
+            -6. Develop short summary of the issues uncovered during the
+                meeting, and make appropriate revisions to the walking skeleton
+        -Architecture Erosion
+            -caused by uncontrolled architectural deviations due to the arch.
+             not being checked for conformance periodically
+            -can affect the quality of the system
+        -Static architecture-conformance analysis (SACA)
+            -assesses whether an implemented software system is consistent with
+             its architectural model
+            -the formalism (e.g., UML) used to model the system arch. presents
+             the static organization of system components and how the
+             components interact
+            -the arch. model is often used by a project manager to plan and
+             allocate work tasks, as well as to assess implementation progress
+    -10.8 - Summary
+        -Skip
