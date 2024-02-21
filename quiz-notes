@@ -1278,23 +1278,38 @@
         -Design practice
             -leads to the creation of various representations of the software
              that serve as a guide for the construction activity that follows
+        -Diversification
+            -Identifying all possible design options
+        -Convergence
+            -Process of evaluating and rejecting design alternatives.
     -9.1 - Design Within the Context of Software Engineering
         -Software design sits at the technical kernel of SWE and is applied
          regardless of the software process model that is used
         -software design is the last SWE action within modeling and sets the
          stage for construction
+        -Four types of design models
+            -Data/class
+            -*Architectural
+                -Relationship between major structural elements of the
+                 software, architectural style, and patterns
+            -*Interface
+                -Describes how software communicates with systems that
+                 interoperate with it and humans who use it
+            -*Component
+                -Transforms structural elements of the software arch. into a
+                 procedural description of software components.
     -9.2 - The Design Process
         -Software design is an iterative process in which requirements are
          translated into a "blueprint" for constructing the software
         -Iterations lead to lower and lower levels of abstraction
         -Three characteristics of good design:
-            -design should implement all explicit requirements contained in
+            -*design should implement all explicit requirements contained in
              requirements model and must accommodate all implicit requirements
              desired by stakeholders
-            -design should be a readable, understandable guide for those who
+            -*design should be a readable, understandable guide for those who
              generate code and for those who test and subsequently support the
              software
-            -design should provide a complete picture of the software,
+            -*design should provide a complete picture of the software,
              addressing the data, functional, and behavioral domains from an
              implementation perspective
         -Quality Guidelines
@@ -1304,21 +1319,21 @@
                 -b. composed of components that exhibit good design
                     characteristics
                 -c. can be implemented in a evolutionary fashion
-            -2. design should be modular (software is logically partitioned
+            -2. *design should be modular (software is logically partitioned
                 into elements or subsystems)
             -3. design should contain distinct representations of data,
                 architecture, interfaces, and components
             -4. design should lead to data structures appropriate for the
                 classes to be implemented and are drawn from recognizable data
                 patterns
-            -5. design should lead to components that exhibit independent
-                functional components
+            -5. *design should lead to components that exhibit independent
+                functional characteristics 
             -6. should lead to interfaces that reduce the complexity of
                 connections between components and with the external
                 environment
             -7. should be derived using a repeatable method that is driven by
                 information obtained during software req. analysis
-            -8. should be represented using a notation that effectively
+            -8. *should be represented using a notation that effectively
                 communicates its meaning
         -Variability-intensive systems
             -refers to systems that may be required to be self-modifying based
@@ -1327,14 +1342,44 @@
              building specialized product variants out of existing software
              products
         -Common design method characteristics
-            -1. mechanism for the translation of the req. model into a design
+            -1. *mechanism for the translation of the req. model into a design
                 representation
-            -2. a notation for representing functional components and their
+            -2. *a notation for representing functional components and their
                 interfaces
-            -3. heuristics for refinement and partitioning
-            -4. guidelines for quality assessment
+            -3. *heuristics for refinement and partitioning
+            -4. *guidelines for quality assessment
         -Generic Task Set for Design
-            -TODO: come back to this? maybe?
+            -1. Examine information model; design appropriate data structures
+                for data objects and their attributes.
+            -2. Use analysis model to select an architectural style that is
+                appropriate for the software.
+            -3. Partition analysis model into design subsystems and allocate
+                these subsystems within the architecture.
+                -Be certain that each subsystem is functionally cohesive.
+                -Design subsystem interfaces.
+                -Allocate analysis classes or functions to each subsystem.
+            -4. *Create a set of design classes or components.
+                -Translate an analysis class description into a design class.
+                -Check each design class against design criteria; consider
+                 inheritance issues
+                -Define methods and messages associated with each design class.
+                -Evaluate and select design patterns for a design class or
+                 subsystem.
+                -Review design classes and revise as required.
+            -5. *Design any interface required with external systems or
+                devices.
+            -6. *Design the user interface.
+                -Review results of task analysis.
+                -Specify action sequence based on user scenarios.
+                -Create a behavioral model of the interface.
+                -Define interface objects and control mechanisms.
+                -Review the interface design, and revise as required.
+            -7. *Conduct component-level design. Specify all algorithms at a
+                relatively low level of abstraction.
+                -Refine the interface of each component.
+                -Define component-level data structures.
+                -Review each component, and correct all errors unconvered.
+            -8. Develop a deployment model.
     -9.3 - Design Concepts
         -Procedural abstraction
             -refers to a sequence of instructions that have a specific and
@@ -1343,7 +1388,7 @@
             -named collection of data that describes a data object
         -Procedural abstractions make use of data abstractions
         -Software architecture
-            -Alludes to the overall structure of the software and the ways in
+            -overall structure of the software and the ways in
              which that structure provides conceptual integrity for a system
         -Structural properties
             -define the components of a system (e.g., modules, objects,
@@ -1357,7 +1402,7 @@
         -Families of related systems
             -Draw upon repeatable patterns that are commonly encountered in the
              design of families of similar systems
-        -Structural models
+        -*Structural models
             -Represent architecture as an organized collection of program
              components
         -Framework models
@@ -1368,10 +1413,10 @@
             -Address the behavioral aspects of the program architecture,
              indicating how the structure or system config may change as a
              function of external events
-        -Process models
+        -*Process models
             -focus on the design of the business or technical process that the
              system must accommodate
-        -Functional models
+        -*Functional models
             -represent the functional hierarchy of a system
         -Architectural Description Languages (ADLs)
             -used to represent the above models
@@ -1445,19 +1490,19 @@
              enable the classes to be implemented and to create a software
              infrastructure that supports the business solution
         -Four characteristics of a well-formed design class:
-            -1. Complete and sufficient
+            -1. *Complete and sufficient
                 -should be complete encapsulation of all attributes and methods
                  that can reasonably be expected to exist for the class
-            -2. Primitiveness
+            -2. *Primitiveness
                 -methods associated with a design class should be focused on
                  accomplishing one service for the class
                 -once the service has been implemented with a method, the class
                  should not provide another way to accomplish the same thing
                 -orthogonality
-            -3. High Cohesion
+            -3. *High Cohesion
                 -See cohesion
                 -Single responsibility
-            -4. Low coupling
+            -4. *Low coupling
                 -See coupling
                 -minimize excessive collaboration
     -9.4 - The Design Model
@@ -1473,7 +1518,7 @@
             -diagrams are refined and elaborated though
             -more implementation-specific detail provided
         -Design Modeling Principles
-            -1. Design should be traceable to the requirements model
+            -1. *Design should be traceable to the requirements model
             -2. Always consider the architecture of the system to be built
             -3. Design of data is as important as design of processing
                 functions
@@ -1482,10 +1527,10 @@
             -5. User interface design should be tuned to the needs of the end
                 user
             -6. Component-level design should be functionally independent
-            -7. Components should be loosely coupled to one another and to the
+            -7. *Components should be loosely coupled to one another and to the
                 external environment
             -8. Design representations (models) should be easily understandable
-            -9. The design should be developed iteratively
+            -9. *The design should be developed iteratively
             -10. Creation of a design model does not preclude an agile approach
         -Data Design (aka data architecting)
             -creates a model of data and/or information that is represented at
@@ -1499,20 +1544,20 @@
             -usually depicted as a set of interconnected subsystems, often
              derived from analysis packages within the requirements model
         -Architectural model derived from three sources:
-            -1. information about the application domain for the software to be
+            -1. *information about the application domain for the software to be
                 built
-            -2. specific requirements model elements such as use cases or
+            -2. *specific requirements model elements such as use cases or
                 analysis classes, their relationships, and collaborations for
                 the problem at hand
-            -3. availability of architectural styles
+            -3. *availability of architectural styles and design patterns
         -Interface design for software
             -analogous to a set of detailed drawings (and specficiations) for
              the doors, windows, and external utilities of a house
         -Three important elements of interface design:
-            -1. UI
-            -2. external interfaces to other systems, devices, networks, or
+            -1. *UI
+            -2. *external interfaces to other systems, devices, networks, or
                 other producers of consumers of information
-            -3. internal interfaces between various design components
+            -3. *internal interfaces between various design components
         -UI design (aka UX or user experience design)
             -major SWE action
             -UX design focuses on usability of the UI design
@@ -1537,36 +1582,39 @@
          three domains of the analysis model
     -10.1 - Software Architecture
         -Software architecture representation enables you to:
-            -1. analyze the effectiveness of the design in meeting its stated
+            -1. *analyze the effectiveness of the design in meeting its stated
                 requirements
-            -2. consider architectural alternatives at a stage when making
+            -2. *consider architectural alternatives at a stage when making
                 design changes is still relatively easy
-            -3. reduce the risks associated with the construction of the
+            -3. *reduce the risks associated with the construction of the
                 software
         -Three key reasons that software architecture is important
-            -1. software architecture provides a representation that
+            -1. *software architecture provides a representation that
                 facilitates communication among all stakeholders
-            -2. architecture highlights early design decisions that will have a
-                profound impact on all software engineering work that follows
-            -3. architecture constitutes a relatively small model of how the
+            -2. *architecture highlights early design decisions that will have
+                a profound impact on all software engineering work that follows
+            -3. *architecture constitutes a relatively small model of how the
                 system components are structured and work together
-        -Blueprint metaphor
+        -*Blueprint metaphor
             -devs regard architecture descriptions as a means of transferring
              explicit information from architects to designers to SWEs charged
              with producing the system components
             -most familiar to stakeholders who write programs to implement a
              system
-        -Language metaphor
+            -*transfer explicit information from architects->designers->SWEs
+        -*Language metaphor
             -views architecture as a facilitator of communication across
              stakeholder groups
             -arch. desc. needs to be concise and easy to understand because it
              forms basis for negotiation
             -preferred by stakeholders with a high customer focus
-        -Decision metaphor
+            -*facilitates communication across stakeholder groups
+        -*Decision metaphor
             -represents architecture as the product of decisions involving
              trade-offs among properties such as cost, usability,
              maintainability, and performance that have resource consequences
              for the system being designed
+            -*represents decisions made so far
         -Literature metaphor
             -used to document architectural solutions constructed in the past
             -supports construction of artifacts and transfer of knowledge
@@ -1581,6 +1629,9 @@
         -Architectural decision record
             -represents some architectural decision made
             -could just be title, context, decision, status, and consequences
+        -Dominant Design
+            -Innovative software arch. that becomes an industry standard after
+             a period of successful adaption and use in the marketplace
     -10.2 - Agility and Architecture
         -Complex systems require a focus on software architecture, even for
          agile teams
@@ -1613,28 +1664,28 @@
         -Software built for computer-based systems exhibits one of many
          architectural styles
         -Each style describes a system category that encompasses:
-            -1. a set of components (e.g., a database, computational modules)
+            -1. *a set of components (e.g., a database, computational modules)
                 that perform a function required by a system
-            -2. a set of connectors that enable "communication, coordination,
+            -2. *a set of connectors that enable "communication, coordination,
                 and cooperation" among components
-            -3. constraints that define how components can be integrated to
+            -3. *constraints that define how components can be integrated to
                 form the system
-            -4. semantic models that enable a designer to understand the
+            -4. *semantic models that enable a designer to understand the
                 overall properties of a system by analyzing the known
                 properties of its constituent parts
         -Architectural Pattern
             -imposes transformation on design of an architecture
             -differs from style in a number of fundamental ways:
-                -1. scope is less broad, focusing on one aspect of the
+                -1. *scope is less broad, focusing on one aspect of the
                     architecture rather than the architecture in its entirety
-                -2. imposes a rule on the architecture, describing how the
+                -2. *imposes a rule on the architecture, describing how the
                     software will handle some aspect of its functionality at
                     the infrastructure level (e.g., concurrency)
-                -3. tend to address specific behavioral issues within the
+                -3. *tend to address specific behavioral issues within the
                     context of the architecture (e.g., how real-time
                     applications handle synchronization or interrupts)
         -Brief Taxonomy of Architectural Styles
-            -Data-Centered
+            -*Data-Centered
                 -data store resides at center of architecture and is accessed
                  frequently by other components that have CRUD functionality
                 -blackboard variation
@@ -1646,10 +1697,11 @@
                      clients
                     -data can be passed among clients using blackboard
                      mechanism
-            -Data-Flow
+            -*Data-Flow
+                -ETL Pipeline type shit
                 -applied when input data are to be transformed through a series
                  of computational or manipulative components into output data
-                -pipe-and-filter pattern
+                -*pipe-and-filter pattern
                     -set of components (filters) connected by pipes that
                      transmit data from one component to the next
                     -each filter works independently of those components
@@ -1670,7 +1722,7 @@
                     -Remote Procedure Call 
                         -Components of a main program/subprogram architecture
                          are distributed across multiple computers on a network
-            -Object-Oriented
+            -*Object-Oriented
                 -components of a system encapsulate data and the operations
                  that must be applied to manipulate the data
                 -communication/coordination between components are accomplished
@@ -1697,11 +1749,11 @@
                 -How are data communicated between components?
     -10.4 - Architectural Considerations
         -possible considerations to provide guidance on architecture decisions
-            -Economy
-                -best sfotware is uncluttered and relies on abstraction to
+            -*Economy
+                -best software is uncluttered and relies on abstraction to
                  reduce unnecessary detail
                 -avoids complexity caused by unnecessary functions and features
-            -Visibility
+            -*Visibility
                 -architectural decisions and the reasons for them should be
                  obvious to SWEs who examine the model later
             -Spacing
@@ -1709,7 +1761,7 @@
                  spacing
                 -leads to modular designs, but too much spacing leads to
                  fragmentation and loss of visibility
-            -Symmetry
+            -*Symmetry
                 -implies that a system is consistent and balanced in its
                  attributes
                 -symmetric designs are easier to understand, comprehend, and
@@ -1732,11 +1784,11 @@
             -cuts across several views of information contained in traditional
              architectural representations
             -captures both architecture design decisions and their rationale
-        -Service-Oriented Architecture Design (SOAD) modeling
+        -*Service-Oriented Architecture Design (SOAD) modeling
             -knowledge management framework that provides support for capturing
              architectural decision dependencies in a manner that allows them
              to guide future development activities
-        -SOAD guidance model
+        -*SOAD guidance model
             -contains knowledge about architectural decisions required when
              applying an architectural style in a particular application genre
             -based on arch. info obtained from completed projects that employed
@@ -1744,7 +1796,7 @@
             -documents places where design problems exist and arch. decisions
              must be made, along with quality attributes that should be
              considered in selecting among potential alternatives
-        -SOAD decision model
+        -*SOAD decision model
             -documents both arch. decisions required and records the decisions
              actually made on previous projects along with their justifications
             -fed by guidance model in a tailoring step that allows the
@@ -1755,30 +1807,29 @@
                 -feedback may be accomplished by harvesting lessons learned
                  from project postmortem reviews
     -10.6 - Architectural Design
-        -Archetype
+        -*Archetype
             -abstraction similar to a class
             -represents one element of system behavior
-        -Architectural Context Diagram (ACD)
+            -derived from analysis classes in the analysis model
+        -*Architectural Context Diagram (ACD)
             -models manner in which software interacts with entities external
              to its boundaries
-        -SafeHome archetypes?
-        -SafeHome top-level components?
     -10.7 - Assessing Alternative Architectural Designs
         -Clements et al. on evaluating software architectures
-            -"To put it bluntly, an architecture is a bet, a wager on the
-              success of a system"
+            -*"To put it bluntly, an architecture is a bet, a wager on the
+               success of a system"
         -Big Question
             -Will the architectural bet pay off?
         -SEI Architecture Trade-Off Analysis Method (ATAM) Activities
          (performed iteratively)
-            -1. Collect Scenarios
+            -1. *Collect Scenarios
                 -develop a set of use cases to represent the system from the
                  user's point of view
-            -2. Elicit requirements, constraints, and environment description
+            -2. *Elicit requirements, constraints, and environment description
                 -information is required as part of requirements engineering
                  and is used to be certain that all stakeholder concerns have
                  been addressed
-            -3. Describe the architectural styles and patterns that have been
+            -3. *Describe the architectural styles and patterns that have been
                 chosen to address the scenarios and requirements
                 -should be described using one of the following architectural
                  views
@@ -1835,17 +1886,17 @@
             -often only involve the software team supplemented by independent
              experts
         -Most common architectural review techniques used in industry:
-            -experience-based reasoning
-            -prototype evaluation
-            -scenario review
-            -use of checklists
+            -*experience-based reasoning
+            -*prototype evaluation
+            -*scenario review
+            -*use of checklists
         -Many arch. reviews occur early in the project life cycle
             -should also occur after new components or packages are acquired in
              the component-based design
         -One of the most commonly cited problems facing SWEs when conducting
          architectural reviews is the lack of or inadequate architectural work
          products, thereby making review difficult to complete
-        -Pattern-Based Architecture Review (PBAR)
+        -*Pattern-Based Architecture Review (PBAR)
             -evaluation method based on arch. patterns that leverages the
              patterns' relationships to quality attributes
             -well-suited to small, agile teams
@@ -1853,12 +1904,12 @@
             -can accommodate changing requirements and short build cycles and
              help improve the team's understanding of the system architecture
              due to its short preparation and review time
-        -PBAR steps
-            -1. Identify and discuss the quality attributes most important to
+        -*PBAR steps
+            -1. *Identify and discuss the quality attributes most important to
                 the system by walking through the relevant use cases
-            -2. Discuss a diagram of the system's arch. in relation to its
+            -2. *Discuss a diagram of the system's arch. in relation to its
                 requirements
-            -3. Help the reviewer identify the arch. patterns used and match
+            -3. *Help the reviewer identify the arch. patterns used and match
                 the system's structure to the patterns' structure
             -4. Using existing docs and past use cases, examine the arch. and
                 quality attributes to determine each pattern's effect on the
@@ -1871,7 +1922,7 @@
             -caused by uncontrolled architectural deviations due to the arch.
              not being checked for conformance periodically
             -can affect the quality of the system
-        -Static architecture-conformance analysis (SACA)
+        -Static Architecture-Conformance Analysis (SACA)
             -assesses whether an implemented software system is consistent with
              its architectural model
             -the formalism (e.g., UML) used to model the system arch. presents
