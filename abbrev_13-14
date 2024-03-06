@@ -1,0 +1,242 @@
+-Man in the middle
+    -Third party intercepting comms between 2 trusted sources and impersonating
+     one or both of the parties
+-Mobile App Design Technical Considerations
+    -Multiple hardware/software platforms
+    -Short development cycles
+    -Power management
+-Mobile Dev Life Cycle
+    -Inception
+        -requirements eliciation
+    -Design
+        -arch., navigation, interface, and content
+        -define UX using screen mockups and paper prototypes
+    -Development
+        -software is coded, tested, and evaluated
+    -Stabilization
+        -Incremental improvement and approval of prototypes
+    -Deployment
+        -review by app store (or PO) for sale/download
+-Mobile UI Models Types
+    -Platform
+        -Constraints imposed by platforms
+    -Presentation
+        -Describes UI appearance
+    -Task
+        -tasks user must perform to meet her task goals
+-Mobile App Design Considerations
+    -Define UI brand signatures
+    -Identify core user stories
+    -Optimize UI flows and elements
+-Mobile App Design Approaches
+    -Usage Scenarios
+        -Understand context scenario and transitions
+    -Ethnographic Observation
+        -Observe user in changing contexts
+    -Low-Fidelity Paper Prototypes
+        -cheap, true-to-size representations of proposed UI
+-Mobile App Design Mistakes
+    -Kitchen Sink
+    -Inconsistency
+    -Lack of Speed
+-Service Computing
+    -Offload service logic to API on server somewhere
+-Cloud Computing
+    -Compute happens in the cloud
+    -SaaS
+        -Figma
+    -PaaS
+        -Heroku
+    -IaaS
+        -AWS
+-Context 
+    -external conditions in which app is being used
+-Context-Aware Mobile App
+    -Use sensors or other external devices to understand context in which it's
+     being used
+    -Ex: A nurse's work app waiting to download patient info until close to
+         patient's home
+    -Ex: Map app using speed and GPS data
+-Web App UI Objectives
+    -1. Establish consistent window into content/functionality provided by the
+        interface
+    -2. Guide user through a series of interactions with the app
+    -3. Organize navigation options and content available to the user
+-Layout Guidelines
+    -Don't be afraid of empty space
+    -Emphasize content
+        -80% content, 20% other featuers
+    -Organize layout elements from top-left to bottom-right
+-Content Architecture
+    -how content objects (or composite objects) are structured for presentation
+     and navigation 
+-Web App Architecture
+    -How app is structured to handle user interaction, handle internal processing
+     tasks, effect navigation, & present content
+-MVC Shit
+-Navigation Semantic Units (NSUs)
+    -set of information and related navigation structures that collaborate in the
+     fulfillment of a subset of related user requirements
+    -shows how an actor moves between content objects or web app functions
+    -Composed of a set of navigation elements (WoNs)
+-Ways of Navigating (WoN)
+    -represents the best navigation pathway to achieve a navigational goal for a
+     specific type of user
+    -Organized as a set of navigation nodes (NN) that are connected by navigation
+     links
+        -Navigation link may be another NSU
+-Overall navigation structure for a web app may be organized as a set
+ of NSUs
+-Quality Attributes 
+    -Usability
+    -Functionality
+    -Reliability
+    -Efficiency
+    -Maintainability
+    -Security
+    -Scalability
+    -Time to Market
+-Important Touch-Screen Considerations
+    -Identify your audience.
+    -There is a fine line between simplicity and laziness.
+    -Use clear and consistent labels.
+-Design Pattern
+    -characterized as a three-part rule which expresses a relation between a
+     certain context, a problem, and a solution
+-Effective Design Pattern Traits
+    -Captures specific solution to bounded problem
+    -Provides solution that has been proven in practice
+    -Elegant in its approach and its utility
+-Types of Design Patterns
+    -Architectural
+        -broad-based design problems solved using a structural approach
+    -Data
+        -recurring data-oriented problems and the data modeling solutions that can
+         be used to solve them
+    -Component (aka design)
+        -Problems associated with:
+            -the development of subsystems and components
+            -the way they communicate with one another
+            -placement within a larger architecture
+-Idioms
+    -Describe how to implement all or part of a specific algorithm or data
+     structure for a software component within the context of a specific
+     programming language
+-OO Design Pattern Types
+    -Creational
+    -Structural
+    -Behavioral
+-Creational
+    -focus on creation, composition, and representation of objects
+    -provide mechanisms that make the instantiation of objects easier within a
+     system
+    -enforce constraints on the type and number of objects that can be created
+     within a system
+    -Ex: Builder
+-Structural
+    -focus on problems and solutions associated with how classes and objects are
+     organized and integrated to build a larger structure
+    -Ex: Adapter
+-Behavioral
+    -address problems associated with the assignment of responsibility between
+     objects and the way communication is affected between objects
+    -Ex: Command, Iterator
+-Framework
+    -"mini-architecture"
+    -foundation from which other design patterns can be applied
+    -less abstract than patterns
+-Parts of Pattern Template
+    -Name
+    -Problem
+    -Motivation
+    -Context
+-Approach for designer to think in patterns
+    -1. Understand big picture and its context
+    -2. Extract patterns from big picture
+    -3. Utilize "big picture" patterns to establish a skeleton
+    -4. Elaborate (architectural -> component)
+    -5. Do 1-4 until design is fleshed out 
+    -6. Refine design by adapting patterns
+-Pattern-Based Design Tasks
+    -1. Examine requirements model and develop problem hierarchy
+    -2. Determine if reliable pattern language exists for problem domain
+    -3. Beginning with a broad problem, determine whether one or more
+        architectural design patterns are available for it
+-Pattern-Organizing Table
+    -Usually a spreadsheet
+    -Y-Axis: Organized Problem Statements
+    -X-Axis: Pattern types (database, application, implementation, infrastructure)
+    -Entries are possible patterns for the problem in given domain
+-Anti-Patterns
+    -Common solutions to design problems that have negative effects on software
+     quality
+    -Good to identify problems
+    -Valuable guidance when trying to refactor
+    -Help technical reviewers uncover areas of concern
+-Anti-Patterns
+    -Blob
+        -Single class with large number of attributes or operations
+    -Boat Anchor
+        -Keeping part of a system that no longer has any use
+    -Lava Flow
+        -Not modifying code due to costs or unpredictable consequences
+-UI Design Pattern Categories
+    -Whole UI
+        -provides desing guidance for top-level structure and navigation
+         throughout the whole interface
+        -Ex: Top-Level Navigation
+    -Page Layout
+        -Address the general org of pages (for websites) or distinct screen
+         displays (for interactive apps)
+        -Ex: Card Stack
+    -E-Commerce
+        -specific to websites
+        -implement recurring elements of e-commerce apps
+        -Ex: Shopping Cart
+-Mobility Design Pattern Examples
+    -Maps
+        -displaying a map
+        -Ex: Map showing a restaurant in a review app
+    -Popovers
+        -letting user know something from real-time event or user action
+        -Ex: Pop-up message, toast
+    -Invitations
+        -Informing user that he must participate in some action or dialog
+        -Ex: Dialog box, tool tip, self-playing video demo
+-Secure Coding Practices
+    -Principles of designing code that adheres to secure coding best practices,
+     safeguarding and protecting published code from known, unknown, and
+     unexpected vulnerabilities
+    -*Set of principles that, when adhered to, limit software vulnerabilities
+-Four Pillars of Software Security
+    -1. Knowledge and awareness
+    -2. Protection of computing devices
+    -3. Protection of data
+    -4. Protection of networks and safe use of the Internet
+-Top 10 SEI CERT Practices (pick 3)
+    -1. Validate inputs
+    -2. Heed compiler warnings
+    -4. Keep it simple
+-CWE
+    -Common Weakness Enumeration
+    -Categorizes common software flaws that lead to vulnerabilities
+-CVE
+    -Common Vulnerability & Exposures
+    -Known and existing flaws in some existing system
+-CWE Top 25 (pick 3)
+    -Out of bounds write
+    -Cross-site scripting
+    -SQL injection
+-Seven Pernicious Kingdoms
+    -Abstract collection of software vulnerabilities that share a common theme
+     or feature
+-Seven Pernicious Kingdoms (pick 3)
+    -Input validation and representation
+        -Input not handled correctly and shit breaks
+        -Buffer overflows, cross-site scripting, integer overflows,
+         SQL injection
+    -Errors
+        -Error not handled or print too much information (like passwords)
+    -Code Quality
+        -System breaks due to bad code
+        -Double free, memory leaks, UB, unitialized variables, use after free

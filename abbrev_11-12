@@ -1,0 +1,225 @@
+-Module Roles
+    -Control
+    -Problem Domain
+    -Infrastructure
+-OO Component Design Principles
+    -Open-Closed
+    -Liskov Substitution
+    -Common Closure
+    -Common Reuse
+-OO Component Design Guidelines
+    -Components
+        -Establish naming conventions for components specified as part
+         of the architectural model and then refined and elaborated as
+         part of the component-level model.
+        -Arch. names should be drawn from problem domain and have
+         meaning to all stakeholders who view it.
+        -Infrastructure or elaborated component-level classes should be
+         named to reflect implementation-specific meaning.
+        -Use stereotypes to help identify the nature of components at
+         the detailed design level
+    -Interfaces
+        -Provide important info about communication and collaboration
+        -Unfettered representation will complicate diagrams
+        -Recommendations to simplify UML
+            -1. Lollipop representation of an interface should be used
+                in lieu of the more formal UML box and dashed arrow
+                approach when diagrams grow complex.
+            -2. For consistency, interfaces should flow from the
+                left-hand side of the component box.
+            -3. Only show interfaces that are relevant to the component
+                under consideration, even if others are available.
+    -Dependencies and Inheritance
+        -Model deps from left to right
+        -Model inheritance from bottom (derived) to top (base)
+        -Interdependencies should be represented via interfaces rather
+         than representation of a component-to-component dependency
+            -Follows OCP
+-Cohesion Types
+    -Functional
+        -When a module performs one and only one computation then
+         returns a result
+    -Layer
+        -When a higher layer accesses the services of a lower layer,
+         but lower layers do not access higher layers
+            -Access flows downwards
+    -Communicational
+        -When all operations that access the same data are defined in
+         one class
+-Class Coupling Categories
+    -Content Coupling
+        -When one component modifies data that is internal to another
+         component
+            -Violates "information hiding" design concept
+    -Control Coupling
+        -When A() invokes B() but passes a control flag to B that
+         "directs" logical flow within B
+        -Changes to B can result in a change of meaning in control flag
+         passed by A, potentially causing a bug
+    -External Coupling
+        -When a component communicates or collaborates with
+         infrastructure components
+        -Necessary, but should be limited
+-OO Component Level Design Tasks (abbrev)
+    -1. Identify all design classes that correspond to the problem domain.
+    -2. Identify all design classes that correspond to the infrastructure domain.
+    -4. Describe persistent data sources (databases and files) and identify the
+        classes required to manage them.
+-WebApp Components
+    -1. Function that manipulates content or provides computational or data
+        processing for end-user
+    -2. Cohesive package of content/functionality that provides the end user with
+        some required capability
+-Structured Programming Constructs
+    -Sequence
+    -Condition
+    -Repetition
+-CBSE Steps (abbrev)
+    -1. Outline system requirements.
+    -2. Identify candidate components.
+    -4. Perform architectural design.
+-CBSE Advantages (abbrev)
+    -Reduced Lead Time (reduced dev time)
+        -You can use shit that already exists
+    -Greater ROI
+        -You can reuse your shit, so cost is spread
+    -Enhances Quality
+        -Shit gets tested in multiple apps
+-CBSE Risks
+    -Quality
+        -Don't know shit about design, makes testing hard
+    -Security
+        -Untested combos of shit can cause vulnerabilities
+    -System evolution
+        -Shit may become incompatible or have undocumented features
+-UX Design Components (abbrev)
+    -Strategy
+        -user needs and business goals
+    -Scope
+        -requirements needed for feature set
+    -Structure
+        -interaction design and information architecture elements
+-UX Design Questions
+    -1. What can users do with a mouse, finger, or stylus to interact with the
+        interface?
+    -2. Are there any constraints put in place to prevent errors?
+    -3. What feedback does a user get once an action is performed?
+-Golden Rules of UX Design
+    -1. Place the user in control
+        -1a. Provide for flexible interaction.
+        -1b. Allow user interaction to be interruptible and undoable.
+    -2. Reduce the user's memory load
+        -2a. Reduce demand on short-term memory.
+        -2b. Define intuitive shortcuts.
+    -3. Make the interface consistent
+        -3a. Allow user to put current task into meaningful context.
+        -3b. Maintain consistency across a complete product line.
+-UI Analysis Models
+    -Design
+        -Created by SWE
+    -User
+        -Profile of end users of the system
+    -Mental
+        -Image of the system users carry in their heads
+    -Implementation
+        -Combines outward manifestation of the system along with all supporting
+         information
+        -Should be close to user's mental model
+-UI Analysis and Design Process Framework Activities
+    -1. Interface Analysis and Modeling
+        -Building end user profiles and eliciting requirements
+    -2. Interface Design
+        -Define a set of interface objects/actions that enable a user to perform
+         all defined tasks that satisfy usability goals for the system
+    -3. Interface Construction
+        -Iterative prototype construction
+    -4. Interface Validation
+        -Ensuring UI meets usability requirements
+-UX Problem Components (things to understand)
+    -1. End users.
+    -2. Tasks users need to perform.
+    -3. Content presented as part of interface.
+    -4. Environment in which tasks will take place.
+-Customer Journey Map Creation Steps (abbrev)
+    -1. Gather stakeholders.
+    -2. Conduct research.
+    -3. Build the model.
+-User Persona Creation and Use Steps
+    -1. Data collection and analysis.
+    -2. Describe personas.
+    -3. Develop scenarios.
+    -4. Acceptance by stakeholders.
+-Task Analysis Questions
+    -What is the sequence of work tasks - the workflow?
+    -What is the hierarchy of tasks?
+-5-Day Sprint for UX Design (Google) (no desc)
+    -1. Understand
+    -2. Sketch
+    -3. Decide
+    -4. Prototype
+    -5. Validate 
+-Interface Design Evaluation Cycle
+    -1. Preliminary Design
+    -2. Build Prototype #1 Interface
+    -3. User Evaluates Interface
+    -4. Evaluation Studied by Designer
+    -5. Design Modifications Are Made
+    -6. Build Prototype #N Interface. Go to step 3.
+-Early Design Review Criteria
+    -1. Length and complexity of requirements model or written spec of the
+        system and its interface 
+    -2. # of user tasks and average # of actions per task
+    -4. Interface style, help facilities, and error-handling protocol
+-Usability Design Principles
+    -Consistency
+        -The use of navigation controls, menus, icons, and aesthetics should be
+         consistent throughout.
+    -Efficiency
+        -The design of the application and its interface should optimize the
+         user's work efficiency, not the efficiency of the developer who designs
+         and build it or the client-server environment that executes it.
+    -Focus
+        -The interface (and content) should stay focused on the user task(s) at
+         hand.
+-UI "don'ts"
+    -1. Don't force user to read excessive text.
+    -2. Avoid scrolling if possible.
+    -3. Don't allow aesthetics to exceed functionality
+-Accessibility Guidelines
+    -Application Accessibility
+        -Make UI able to be used by those with special needs
+    -Response Time
+        -System needs to respond consistently and in a reasonable time
+    -Internationalization
+        -Provide good translations (account for it in your code)
+-Types of Testing
+    -AD-HOC Testing
+        -Informal, no test plans or test cases
+    -Unit Testing
+        -Small parts tested one at a time
+    -Smoke Test
+        -Quickly go through everything to quickly check if system is working as
+         intended
+        -Looks for big isses
+        -Performed early on or after a big change
+-Test-Driven Development (TDD)
+    -Software approach where tests are written before code, ensuring that
+     testing occurs at every stage of development
+    -Key Components
+        -Test First
+        -Minimum Code Requirement
+        -Refactor
+    -"Red, Green, Refactor"
+-TDD Variants
+    -Behavior-Driven Development (BDD)
+        -Uses a DSL (e.g., Gherkin) that allows stakeholders, QA, and devs to
+         define behavior before development begins
+    -Acceptance Test-Driven Development (ATDD)
+        -Acceptance criteria defined before development starts
+        -Focuses on satisfying user requirements and user experience
+    -Exploratory Test-Driven Development (ETDD)
+        -Developers write tests to explore potential behaviors and outcomes
+         instead of specific, predefined behaviors
+    -Developer Test-Driven Development (DevTDD)
+        -Classic TDD
+

@@ -1932,3 +1932,856 @@
              allocate work tasks, as well as to assess implementation progress
     -10.8 - Summary
         -Skip
+-Chapter 11 - Component-Level Design
+    -Intro
+    -11.1 - What is a component?
+        -Component
+            -Modular building block for computer software
+            -differs depending on POV of SWE who uses it
+        -Component Def (UML)
+            -"modular, deployable, and replaceable part of a system that
+             encapsulates implementation and exposes a set of interfaces"
+        -Trad Component (Module) roles
+            -1. *Control Component
+                -Coordinates invocation of all other problem domain components
+            -2. *Problem Domain Component
+                -implements a complete or partial function required by customer
+            -3. *Infrastructure Component
+                -responsible for functions that support the processing required
+                 in the problem domain
+    -11.2 - Designing Class-Based Components
+        -Basic Design Principles
+            -1. *The Open-Closed Principle (OCP)
+                -Modules should be "open for extension but closed for
+                 modification."
+                -specify component so that it can be extended without the need
+                 to make internal changes to the component itself
+                -create abstractions to be a buffer between extendable
+                 functionality and the design class itself
+                -USE INTERFACES
+            -2. *The Liskov Substitution Principle (LSP)
+                -"Subclasses should be substitutable for their base classes."
+                -components that use base classes should contine to function
+                 proprly if a derived class is used instead
+            -3. *The Dependency Inversion Principle (DIP)
+                -"Depend on abstractions. Do not dpeend on concretions."
+                -The more a component depends on other concrete components (in
+                 lieu of interfaces), the more difficult it will be to extend.
+            -4. The Interface Segregation Principle (ISP)
+                -"Many client-specific interfaces are better than one general
+                 purpose interface." 
+                -Create an interface to serve each major category of clients.
+            -5. *The Reuse/Release Equivalency Principle (REP)
+                -"The granule of reuse is the granule of release."
+                -Reusable components create an implcit contract between the
+                 resuable entity and the people who will use it.
+                -Dev commits to establish a release control system that
+                 supports and maintains older versions of the entity while
+                 users slowly upgrade to the most current version.
+                -Group reusable classes into packages that can be managed and
+                 controlled as newer version evolve.
+            -6. The Common Closure Principle (CCP)
+                -"Classes that change together belong together."
+                -Classes should be packages cohesively.
+                -When classes are packaged as part of a design, they should
+                 address the same functional or behavioral area.
+            -7. *The Common Reuse Principle (CRP)
+                -"Classes that aren't reused together should not be grouped
+                 together."
+                -Consequence of 5 and 6
+                -Packing unrelated classes results in unnecessary integration
+                 and testing.
+        -Component Level Design Guidelines
+            -Components
+                -Establish naming conventions for components specified as part
+                 of the architectural model and then refined and elaborated as
+                 part of the component-level model.
+                -Arch. names should be drawn from problem domain and have
+                 meaning to all stakeholders who view it.
+                -Infrastructure or elaborated component-level classes should be
+                 named to reflect implementation-specific meaning.
+                -Use stereotypes to help identify the nature of components at
+                 the detailed design level
+            -Interfaces
+                -Provide important info about communication and collaboration
+                -Unfettered representation will complicate diagrams
+                -Recommendations to simplify UML
+                    -1. Lollipop representation of an interface should be used
+                        in lieu of the more formal UML box and dashed arrow
+                        approach when diagrams grow complex.
+                    -2. For consistency, interfaces should flow from the
+                        left-hand side of the component box.
+                    -3. Only show interfaces that are relevant to the component
+                        under consideration, even if others are available.
+            -Dependencies and Inheritance
+                -Model deps from left to right
+                -Model inheritance from bottom (derived) to top (base)
+                -Interdependencies should be represented via interfaces rather
+                 than representation of a component-to-component dependency
+                    -Follows OCP
+        -Cohesion
+            -Implies that a component or class encapsulates only attributes and
+             operations that are closely related to each other and to the class
+             itself
+        -Cohesion Types
+            -Functional
+                -When a module performs one and only one computation then
+                 returns a result
+            -Layer
+                -When a higher layer accesses the services of a lower layer,
+                 but lower layers do not access higher layers
+                    -Access flows downwards
+            -Communicational
+                -When all operations that access the same data are defined in
+                 one class
+        -Coupling
+            -Qualitative measure of the degree to which classes are connected
+             to one another
+            -Low is good
+        -Class Coupling Categories
+            -Content Coupling
+                -When one component modifies data that is internal to another
+                 component
+                    -Violates "information hiding" design concept
+            -Control Coupling
+                -When A() invokes B() but passes a control flag to B that
+                 "directs" logical flow within B
+                -Changes to B can result in a change of meaning in control flag
+                 passed by A, potentially causing a bug
+            -External Coupling
+                -When a component communicates or collaborates with
+                 infrastructure components
+                -Necessary, but should be limited
+    -11.3 - Conducting Component-Level Design
+        -1. Identify all design classes that correspond to the problem domain.
+        -2. Identify all design classes that correspond to the infrastructure
+            domain.
+        -3. Elaborate all design classes that are not acquired as reusable
+            components.
+            -i.e., elaborate on all interfaces, attributes, and operations
+             needed for implementation of a class that are not from a reusable
+             package
+            -Cohesion and coupling should be considered
+        -3a. Specify message details when classes or components collaborate. 
+        -3b. Identify appropriate interfaces for each component.
+        -3c. Elaborate attributes and define data types and data structures
+             required to implement them.
+        -3d. Describe processing flow within each operation in detail.
+        -4. Describe persistent data sources (databases and files) and identify
+            the classes required to manage them.
+        -5. Develop and elaborate behavioral representations for a class or
+            component.
+        -6. Elaborate deployment diagrams to provide additional implementation
+            detail.
+        -7. Refactor every component-level design representation and always
+            consider alternatives.
+    -11.4 - Specialized Component-Level Design
+        -WebApp components
+            -1. Well-defined cohesive function that manipulates content or
+                provides computational or data processing for an end-user.
+            -2. Cohesive package of content and functionality that provides the
+                end user with some required capability.
+        -Functional architecture
+            -Representation of the functional domain of the WebApp
+            -describes key functional components in the WebApp and how these
+             components interact with each other.
+        -Structured Programming Constructs
+            -Sequence
+                -Implements processing steps essential in the specification of
+                 any algorithm
+            -Condition
+                -Provides facility for selected processing based on some
+                 logical occurrence
+            -Repetition
+                -Allows for looping
+        -Limited logical constructs helps in human understanding process known
+         as chunking
+        -Chunking
+            -Dividing up information into recognizable segments
+            -Pattern recognition shit
+        -Component-Based Software Engineering (CBSE)
+            -Process that emphasizes the design and construction of
+             computer-based systems using reusable software components
+        -CBSE Steps
+            -1. Outline system requirements
+            -2. Identify candidate components
+            -3. Modify requirements according to discovered components
+            -4. Perform architectural design
+            -5. Identify candidate components
+            -6. Compose components to create system
+        -CBSE Advantages
+            -Reduced lead time
+                -Faster to build complete apps from a pool of existing
+                 components 
+            -Greater return on investment (ROI)
+                -Savings can be realized by purchasing components instead of
+                 redeveloping the same functionality in-house
+            -Leveraged costs of developing components
+                -Reusing components in multiple apps allows costs to be spread
+                 over multiple projects
+            -Enhances Quality
+                -Components are reused and tested in many different
+                 applications
+            -Maintenance of component-based applications
+                -With careful engineering, it can be relatively easy to replace
+                 obsolete components with new or enhanced components
+        -CBSE Risks
+            -Component Selection
+                -difficult to predict component behavior for black-box
+                 components
+                -may be poor mapping of user requirements to the component
+                 architectural design
+            -Component Integration
+                -lack of interoperability standards between components
+                -often requires creation of "wrapper code" to interface
+                 components
+            -Quality
+                -Unknown design assumptions made for the components makes
+                 testing more difficult
+            -Security
+                -system vulnerabilities can be caused by integrating components
+                 in untested combinations
+            -System Evolution
+                -updated components may be incompatible with user requirements
+                 or may contain additional undocumented features
+        -Architectural Mismatch
+            -incompatibilities between assumptions made about components and
+             their operating environments
+            -"thought shit was like this, but it was really like that. bad shit
+             then happens"
+    -11.5 - Component Refactoring
+        -Nothing
+    -11.6 - Summary
+        -Nothing
+-Chapter 12 - User Experience Design 
+    -Intro
+        -Usability
+            -Qualitative measure of the ease and efficiency with which a human
+             can employ the functions and features offered by the
+             high-technology product.
+        -Accesibility
+            -Degree to which people with special needs (e.g., sight-impaired,
+             deaf, elderly) are provided with a means to perceive, understand,
+             navigate, and interact with computer products
+        -User Experience Design
+            -Set of incremental process activities that help the dev team and
+             the project stakeholders focus on providing a positive experience
+             for users of the software product.
+    -12.1 - User Experience Design Elements
+        -UX Design Components (Garret)
+            -Strategy
+                -Identifies user needs and customer business goals that form
+                 the basis for all UX design work
+            -Scope
+                -Includes both the functional and content requirements needed
+                 to realize a feature set consistent with the project strategy
+            -Structure
+                -Consists of the interaction design and information
+                 architecture elements
+            -Skeleton
+                -Comprised of three components
+                    -1. Information Design
+                    -2. Interface Design
+                    -3. Navigation Design
+            -Surface
+                -Presents visual design or appearance of the finished project
+                 to its users
+        -Information Architecture
+            -structures that lead to better organization, labeling,
+             navigation, and searching of content objects
+        -Content Architecture
+            -focuses on the manner in which content object are structured for
+             presentation and navigation
+        -Interaction Design
+            -Focuses on the interface between a product and its user
+        -Important interface questions (shortened):
+            -Are there any constraints put in place to help prevent errors?
+            -What feedback do users get once an action is performed?
+        -Usability Engineering
+            -Part of UX design work that defines the specification, design, and
+             testing of the HCI portion of a software product
+        -Visual Design (AKA, aesthetic design or graphic design)
+            -artistic endeavor that complements the technical aspects of the UX
+             design
+    -12.2 - The Golden Rules
+        -Place the user in control
+            -Design principles
+                -Define interaction modes in a way that does not force a user
+                 into unnecessary or undesired actions.
+                -Provide for flexible interaction.
+                -Allow user interaction to be interruptible and undoable.
+                -Streamline interaction as skill levels advance, and allow the
+                 interaction to be customized.
+                -Hide technical internals from the user.
+                -Design for direct interaction with objects that appear on the
+                 screen.
+        -Reduce the user's memory load
+            -Don't tax a user's memory, or more errors will happen
+            -Design principles
+                -Reduce demand on short-term memory.
+                -Establish meaningful defaults.
+                -Define shortcuts that are intuitive.
+                -The visual layout of the interface should be based on a
+                 real-world metaphor.
+                -Disclose information in a progressive fashion.
+        -Make the interface consistent
+            -Present and acquire information in a consistent fashion
+            -Implications
+                -1. All visual info is organized according to design rules that
+                    are maintained throughout all screen displays.
+                -2. Input mechanisms are constrained to a limited set that is
+                    used consistently throughout the app.
+                -3. Mechanisms for navigating from task to task are
+                    consistently defined and implemented.
+            -Design principles
+                -Allow the user to put the current task into a meaningful
+                 context.
+                -Maintain consistency across a complete product line.
+                -If past interactive models have created user expectations, do
+                 not make changes unless there is a compelling reason to do so.
+    -12.3 - User Interface Analysis and Design
+        -Models
+            -Design
+                -See above
+            -User
+                -Establishes the profile of end users of the system.
+                -Begins with a understanding of the intended users
+                    -includes age, gender, physical abilities, education,
+                     cultural or ethnic background, motivation, goals, and
+                     personality
+                -Can classify user based on familiarity and system knowledge
+            -Mental
+                -Image of the system that end users carry in their heads
+            -Implementation
+                -Combines outward manifestation of the computer-based system
+                 (the look and feel of the interface) coupled with all
+                 supporting information (books, manuals, videotapes, help
+                 files) that describes interface syntax and semantics.
+                -Should be close to user's mental model
+        -User interface analysis and design process framework activites
+            -1. Interface analysis and modeling
+                -Focuses on end user profiles along with requirement
+                 elicitation
+            -2. Interface design
+                -Define a set of interface objects and actions (along with
+                 screen representations) that enable a user to perform all
+                 defined tasks in a manner that meets every usability goal
+                 defined for the system.
+            -3. Interface construction
+                -Begins with prototype creation that enables usage scenarios to
+                 be evaluated
+                -as the iterative process continues, a UI toolkit may be used
+                 to complete construction of the prototype.
+            -4. Interface validation
+                -Focuses on:
+                    -1. The ability of the interface to implement every user
+                        task correctly, to accommodate all task variations, and
+                        to achieve all user requirements
+                    -2. The degree to which the interface is easy to use and
+                        easy to learn
+                    -3. The user's acceptance of the interface as a useful tool
+                        in her work.
+    -12.4 - User Experience Analysis
+        -Key Tenet: Understand the problem before you attempt to design a
+                    solution.
+        -In the case of UX design, understanding the problem means
+         understanding the following:
+            -1. The end users who will interact with the system through the
+                interface.
+            -2. The tasks that end users must perform to do their work.
+            -3. The content that is presented as part of the interface.
+            -4. The environment in which these tasks will be conducted.
+        -Customer Journey Map
+            -Outlines a user's goals and plans for the software project
+            -Shows user's experience as if traveling on a physical trip
+        -Customer Journey Map Creation Steps
+            -1. Gather stakeholders.
+            -2. Conduct research.
+            -3. Build the model.
+            -4. Refine the design.
+            -5. Identify gaps.
+            -6. Implement your findings.
+        -User Persona
+            -Representation of the goals and behavior of a hypothesized group
+             of users.
+            -Often synthesized from data collected during interviews with users
+        -User Persona Creation and Use Steps
+            -1. Data collection and analysis.
+            -2. Describe personas.
+            -3. Develop scenarios.
+            -4. Acceptance by stakeholders.
+        -Cognitive Walkthrough
+            -Method that evaluates whether the order of cues and prompts in a
+             system supports the way people process tasks and anticipates the
+             "next steps" of a system by having users verbalize their
+             decision-making process while using a system representation to
+             complete a user goal.
+            -"Use my product, and tell me what you're thinking while you do it"
+    -12.5 - User Experience Design
+        -5-day sprint for UX design (Google)
+            -Understand
+                -User research activities
+            -Sketch
+                -Involves team and stakeholders
+                -Generate lots of ideas
+                -Paper drawings, notes, anything easy and cheap
+            -Decide
+                -Team votes on ideas to move forward with
+            -Prototype
+                -Could be an MVP or just portions of the customer journey map
+                 or storyboard that you want to evaluate in the "validate"
+                 phase
+            -Validate
+                -Test your prototypes on users
+    -12.6 - User Interface Design
+        -Design patterns exist for UI and can be used
+    -12.7 - Design Evaluation
+        -Interface Design Evaluation Cycle
+            -1. Preliminary Design
+            -2. Build Prototype #1 Interface
+            -3. User Evaluates Interface
+            -4. Evaluation Studied by Designer
+            -5. Design Modifications Are Made
+            -6. Build Prototype #N Interface. Go to step 3.
+        -Early Design Review Criteria
+            -1. The length and complexity of the requirements model or written
+                specification of the system and its interface provide an
+                indication of the amount of learning required by users of the
+                system.
+            -2. The number of user tasks specified and the average number of
+                actions per task provide an indication of interaction time and
+                the overall efficiency of the system.
+            -3. The number of actions, tasks, and system states indicated by
+                the design model imply the memory load on users of the system.
+            -4. Interface style, help facilities, and error-handling protocol
+                provide a general indication of the complexity of the interface
+                and the degree to which it will be accepted by the user.
+    -12.8 - Usability and Accessibility
+        -Mobile interfaces should answer three questions:
+            -1. Where am I?
+            -2. What can I do now?
+            -3. Where have I been and where can I go?
+        -Usability questions?
+        -Usability Design Principles
+            -Anticipation
+            -Communication
+            -Consistency
+            -Controlled Autonomy
+            -Efficiency
+            -Flexibility
+            -Focus
+            -Human Interface Objects
+            -Latency Reduction
+            -Learnability
+            -Metaphors
+            -Readability
+            -Track State
+            -Visible Navigation
+        -Accessibility Guidelines
+            -Application Accessibility
+            -Response Time
+            -Help Facilities
+            -Error Handling
+            -Menu and Command Labeling
+            -Internationalization
+    -12.9 - Conventional Software UX and Mobility
+        -Nothing
+    -12.10 - Summary
+        -Nothing
+-Chapter 13 - Design for Mobility
+    -Intro
+        -Mobile apps are important because most people have a mobile device
+        -Ad hoc design (popular in mobile apps) is only good for simple apps
+    -13.1 - The Challenges
+        -Mobile apps are hard due to device complexities and limitations
+            -different/mini browsers
+            -different OSs and platform-dependent dev environments
+            -spotty connectivity
+            -methods to maintain connection while moving can hurt performance
+            -shitty batteries
+        -Man-in-the-middle-attack
+            -A third party intercepting communications between two trusted
+             sources and impersonating one or both of the parties
+        -Technical Considerations
+            -Multiple hardware and software platforms
+            -Many development frameworks and programming languages
+            -Many app stores with different rules and tools
+            -Very short development cycles (competitive markets)
+            -UI limitations & complex interactions with sensors & cameras
+            -Effective use of context
+            -Power management
+            -Security and privacy models and policies
+            -Computational and storage limitations
+            -Apps that depend on external services
+            -Testing complexity
+    -13.2 - Mobile Development Life Cycle
+        -5 Major Stages
+            -Inception
+                -Requirements elicitation and negotiation
+            -Design
+                -arch., navigation, interface, and content
+                -define UX using screen mockups and paper prototypes
+            -Development
+                -software is coded
+                -test cases created and executed
+                -usability/accessibility evaluations conducted as product
+                 evolves
+            -Stabilization
+                -series of prototypes leading to release candidate
+            -Deployment
+                -review by app store and made available for sale/download
+                -internal app may just need PO approval
+        -Mobile Usability Questions
+            -Is the UI consistent across apps?
+            -Is the device interoperable with different network services?
+            -Is the device acceptable in terms of stakeholder values in the
+             target market areas?
+        -Mobile UI Models
+            -Platform
+                -Describes constraints imposed by each supported platform
+            -Presentation
+                -Describes appearance of UI
+            -Task
+                -structured representation of the tasks a user must perform to
+                 meet her task goals
+        -Three Approaches for Mobile App Design
+            -Usage Scenarios
+                -understand context scenario and transitions between scenarios
+                -scenario-variable types
+                    -location and settings
+                    -movement and posture
+                    -devices and usages
+                    -workloads and distractions
+                    -user preferences
+            -Ethnographic Observation
+                -observe user in changing contexts
+                    -tasks completed differently in private vs social settings
+            -Low-Fidelity Paper Prototypes (e.g., cards or Post-it notes)
+                -cheap, true-to-size representations of proposed UI
+        -Mobile App Design Mistakes
+            -Kitchen Sink
+                -too many features
+            -Inconsistency
+                -keep a uniform look and feel across app
+            -Overdesigning
+                -don't do too much
+            -Lack of speed
+                -make it snappy
+            -Verbiage
+                -too many word
+            -Nonstandard interaction
+                -behave the same on multiple devices when possible
+            -Help-and-FAQ-itis
+                -online help does not fix a bad UI
+    -13.3 Mobile Architectures
+        -Service Computing
+            -allows mobile devs to avoid integrating service source code into
+             the client running on a mobile device
+            -code instead runs on server and communicates with API
+        -Cloud Computing
+            -lets client request compute capabilities as needed across network
+             boundaries, anywhere or anytime
+            -Three Layers
+                -SaaS (for end users)
+                    -software components and apps hosted by third-parties
+                        -Ex: Figma
+                -PaaS (for app devs)
+                    -provides a collaborative development platform to assist
+                     with design, implementation, and testing by geographically
+                     distributed team members
+                        -Ex: Heroku
+                -IaaS (for network architects)
+                    -provides virtual compute resources on the cloud
+                        -Ex: AWS
+    -13.4 - Context-Aware Apps
+        -Nothing?
+    -13.5 - Web Design Pyramid
+        -Web App Interface Objectives
+            -1. Establish consistent window into content/functionality provided
+                by the interface
+            -2. Guide user through a series of interactions with the app
+            -3. Organize navigation options and content available to the user
+        -Layout Guidelines
+            -Don't be afraid of open space
+            -Emphasize content
+            -Organize layout elements from top-left to bottom-right
+            -Group navigation, content, and function geographically within the
+             page
+            -Don't extend your real estate with the scrolling bar
+            -Consider resolution and browser window size when designing layout
+        -Content Architecture
+            -focuses on the manner in which content objects (or composite
+             objects such as Web pages) are structured for presentation and
+             navigation
+        -Web App Architecture
+            -Addresses the manner in which the app is structured to manage user
+             interaction, handle internal processing tasks, effect navigation,
+             & present content
+        -Web app architecture interface basic characteristics
+            -built using layers with different concerns
+            -app data should be separate form page's contents (navigation
+             nodes)
+            -contents should be separated from interface look-and-feel (pages)
+        -Model-View-Controller (MVC) Architecture
+            -popular web app architecture
+            -decouples UI from web app functionality and information content
+            -Model
+                -Contains all application-specific content and processing
+                 logic, including all content object, access to external
+                 data/information sources, and all processing functionality
+                 that is application-specific
+            -View
+                -Contains all interface-specific functions and enables the
+                 presentation of content and processing logic, including all
+                 content objects, access to external data/information sources,
+                 and all processing functionality required by the end user
+            -Controller
+                -Manages access to the model and view and coordinates data flow
+                 between them
+        -Navigation Semantic Units (NSUs)
+            -set of information and related navigation structures that
+             collaborate in the fulfillment of a subset of related user
+             requirements
+            -shows how an actor moves between content objects or web app
+             functions
+            -Composed of a set of navigation elements (WoNs)
+        -Ways of Navigating (WoN)
+            -represents the best navigation pathway to achieve a navigational
+             goal for a specific type of user
+            -Organized as a set of navigation nodes (NN) that are connected by
+             navigation links
+                -Navigation link may be another NSU
+        -Overall navigation structure for a web app may be organized as a set
+         of NSUs
+    -13.6 - Component-Level Design
+        -Mobile apps deliver increasingly sophisticated processing functions
+         that:
+            -1. Perform localized processing to generate content and navigation
+                capability in a dynamic fashion
+            -2. Provide computation and data processing capability that are
+                appropriate for the app's business domain
+            -3. Provide sophisticated database query and access
+            -4. Establish data interfaces with external corporate systems
+    -13.7 - Mobility and Design Quality
+        -Quality Attribute Additions
+            -Security
+                -mobile security is very important
+            -Availability
+                -make available to everyone all the time, or the customer will
+                 leave
+            -Scalability
+                -design so that you can scale to many users
+            -Time to Market
+                -first product to do a thing typically gets more users
+            -Content Quality
+                -content has to be good to stand out
+        -Mobile Product Quality Checklist (I'm only doing three)
+            -Can content, function, and/or navigation options be tailored to
+             user's needs?
+            -Can content and/or functionality be customized to the bandwidth at
+             which the user communicates? Does the app account for weak or lost
+             signals in an acceptable manner?
+            -Can content, function, and/or navigation options be made context
+             aware according to the user's preferences?
+    -13.8 - Mobility Design Best Practices
+        -Important Touch-Screen Considerations
+            -Identify your audience.
+            -Design for the context of use.
+            -There is a fine line between simplicity and laziness.
+            -Use the platform as an advantage.
+            -Make scrollbars and selection highlighting more salient.
+            -Increase discoverability of advanced functionality.
+            -Use clear and consistent labels.
+            -Clever icons should never be developed at the expense of user
+             understanding.
+            -Support user expectations for presentation.
+            -Long scrolling forms trump multiple screen on mobile devices.
+    -13.9 - Summary
+        -Nothing
+-Chapter 14 - Pattern-Based Design
+    -Intro
+    -14.1 - Design Patterns
+        -Design Pattern
+            -characterized as a three-part rule which expresses a relation
+             between a certain context, a problem, and a solution
+        -Context
+            -Allows the reader to understand the environment in which the
+             problem resides and what solution might be appropriate within that
+             environment
+        -Effective Design Pattern Traits 
+            -1. Captures a specific solution to a bounded problem
+            -2. Provides a solution that has been proven in practice
+            -3. Identifies an approach to a problem that is not obvious
+            -4. Identifies the relationship(s) between the design and other
+                architectural elements
+            -5. Elegant in its approach and its utility
+        -Generativity
+            -successive application of several patterns, each encapsulating its
+             own problem and forces, unfolds a larger solution which emerges
+             indirectly as a result of the smaller solutions
+        -Types of Design Patterns
+            -Architectural
+                -describe broad-based design problems solved using a structural
+                 approach
+            -Data
+                -Describe recurring data-oriented problems and the data
+                 modeling solutions that can be used to solve them
+            -Component (sometimes just _design patterns_)
+                -address problems associated with the development of subsystems
+                 and components, the way they communicate with one another, and
+                 their placement within a larger architecture
+            -Interface
+                -Describe common UI problems and their solutions with a system
+                 of forces that includes the specific characteristis of end
+                 users
+            -Web App
+                -address a problem set encountered when building web apps
+                -often incorporates many of the other pattern types
+            -Mobile
+                -describe commonly encountered problems when developing
+                 solutions for mobile platforms
+        -Idioms
+            -Describe how to implement all or part of a specific algorithm or
+             data structure for a software component within the context of a
+             specific programming language
+        -OO Design Pattern Types
+            -Creational
+                -focus on creation, composition, and representation of objects
+                -provide mechanisms that make the instantiation of objects
+                 easier within a system
+                -enforce constraints on the type and number of objects that can
+                 be created within a system
+            -Structural
+                -focus on problems and solutions associated with how classes
+                 and objects are organized and integrated to build a larger
+                 structure
+            -Behavioral
+                -address problems associated with the assignment of
+                 responsibility between objects and the way communication is
+                 affected between objects
+        -Framework
+            -reusable "mini-architecture" that serves as a foundation from
+             which other design patterns can be applied
+            -less abstract than patterns
+    -14.2 - Pattern-Based Software Design
+        -Approach for designer to think in patterns:
+            -1. Be sure to understand the big picture - the context in which
+                the software to be built resides. The requirements model should
+                communicate this.
+            -2. Examining the big picture, extract the patterns that are
+                present at that level of abstraction.
+            -3. Begin the design with the "big picture" patterns that establish
+                a context or skeleton for further design work.
+            -4. "Work inward from the context," looking for patterns at lower
+                levels of abstraction that contribute to the design solution.
+            -5. Repeat steps 1 to 4 until the complete design is fleshed out.
+            -6. Refine the design by adapting each pattern to the specifics of
+                the software you're trying to build.
+        -Pattern-Based Design Tasks
+            -1. Examine the requirements model and develop a problem hierarchy.
+            -2. Determine if a reliable pattern language has been developed for
+                the problem domain.
+            -3. Beginning with a broad problem, determine whether one or more
+                architectural patterns are available for it.
+            -4. Using the collaborations provided for the architectural
+                pattern, examine subsystem or component-level problems and
+                search for appropriate patterns to address them.
+            -5. Repeat steps 2 to 4 until all broad problems have been
+                addressed.
+            -6. If UI design problems have been isolated (this is almost always
+                the case), search the many UI design pattern repositories for
+                appropriate patterns.
+            -7. Regardless of its level of abstraction, if a pattern language
+                and/or patterns repository or individual pattern shows promise,
+                compare the problem to be solved against the existing
+                pattern(s) presented.
+            -8. Be certain to refine the design as it is derived from patterns
+                using design quality criteria as a guide.
+        -Pattern-Organizing Table
+            -Abbreviated list of problem statements in left-most column
+                -Organized by
+                    -Data and Content
+                    -Architecture
+                    -Component-Level
+                    -UI Issues
+            -Four pattern types are listed across the top row
+                -Database
+                -Application
+                -Implementation
+                -Infrastructure
+            -Entries are added by mapping candidate patterns to the correct
+             problem and pattern type
+                -The pattern's name can be a hyperlink to a website or document
+                 describing the pattern
+            -Can be implemented as a spreadsheet
+    -14.3 - Architectural Patterns
+        -Nothing
+    -14.4 - Component-Level Design Patterns
+        -Nothing
+    -14.5 - Anti-Patterns
+        -Anti-Pattern
+            -Describe commonly used solutions to design problems that usually
+             have negative effects on software quality
+            -Good to identify problems
+            -Provide valuable guidance when looking for ways to refactor
+            -Help technical reviewers uncover areas of concern
+        -Selected Anti-Patterns
+            -Big Ball of Mud
+                -System with no recognizable structure
+            -Stovepipe System
+                -Barely maintainable assemblage of ill-related components
+            -Boat Anchor
+                -Retaining part of a system that no longer has any use
+            -Lava Flow
+                -Not modifying code because it's too expensive or has
+                 unpredictable consequences
+            -Spaghetti Code
+                -Program with barely-comprehensible structure, especially
+                 because of misuse of code structures
+            -Copy and Paste Programming
+                -Copying existing code several times rather than creating
+                 generic solutions
+            -Silver Bullet
+                -Assuming that a favorite technical solution will always solve
+                 a larger process or problem
+            -Programming by Permutation
+                -Trying to approach a solution by successively modifying the
+                 code to see if it works
+    -14.6 - UI Design Patterns
+        -Categories
+            -Whole UI
+                -provides desing guidance for top-level structure and
+                 navigation throughout the whole interface
+            -Page Layout
+                -Address the general org of pages (for websites) or distinct
+                 screen displays (for interactive apps)
+            -E-Commerce
+                -specific to websites
+                -implement recurring elements of e-commerce apps
+    -14.7 - Mobility Design Patterns
+        -Examples
+            -Check-in Screens
+                -how to check in from a specific location, make a comment, and
+                 share comments with friends and followers on a social network
+            -Maps
+                -how to display a map within the context of an app that
+                 addresses some other subject
+                -Ex: review a restaurant and represent its location within a
+                     city
+            -Popovers
+                -how to represent a message or information (from app or another
+                 user) that arises in real time or as the consequences of a
+                 user action
+            -Sign-up Flows
+                -how to provide a simple way to sign in or register for
+                 information or functionality
+            -Custom Tab Navigation
+                -how to represent a variety of different content objects in a
+                 manner that enables the user to select the one she wants
+            -Invitations
+                -how to inform the user that he must participate in some action
+                 or dialog
+                -Ex: making use of a dialog box, tool tip, or a self-playing
+                     video demo
+    -14.8 - Summary 
+        -Nothing
