@@ -1,0 +1,135 @@
+-quality views
+    -*transcendental
+        -recognized but not defined
+    -*user
+        -terms of end user's goals
+    -*manufacturer's
+        -original spec
+    -product
+        -inherent characteristics of product
+    -value-based
+        -how much customer willing to pay
+-quality of design
+    -characteristics specified by designers
+-quality of conformance
+    -degree to which implementation follows design and resulting system meets
+     requirements and performance goals
+-user satisfaction =
+    -compliant product
+    -good quality
+    -delivery within budget and schedule
+-software quality
+    -effective software process applied in a manner that creates a useful
+     product that provides measurable value for those who produce it and those
+     who use it
+-three points
+    -effective software process
+    -useful product
+    -adding value for both the producer and user
+
+-Quality in Use Model
+    -appropriate when considering using the product in a particular context
+-Quality in Use Model Characteristics
+    -Effectiveness
+    -Efficiency
+    -Satisfaction
+
+-Product in Quality Model
+    -focus on both static and dynamic nature of computer systems
+-Product in Quality Model Characteristics
+    -Reliability
+    -Security
+    -Maintainability
+-Cost of Quality
+    -Costs of adding quality combined with not providing enough quality
+-Prevention Costs
+    -cost of management activities for quality control and QA activities
+    -cost of added technical activities to develop complete requirements and
+     design models
+    -test planning costs
+    -cost of training
+-Appraisal Costs
+    -activities to gain insight into product condition the first time through
+     each process
+-Appraisal Costs Examples
+    -conducting technical reviews
+    -data collection and metrics evaluation
+    -cost of testing and debugging
+-Internal Failure
+    -error in product before shipment
+-Internal Failure Costs
+    -reworking to correct error
+    -when rework generates side effects that must be mitigated
+    -collection of quality metrics to assess modes of failure
+-External Failure
+    -defects after shipment
+-External Failure Costs
+    -complaint resolution
+    -warranty work
+    -poor reputation/loss of business
+-Impact of Management Decisions on Product Quality
+    -Estimation Decisions
+    -Scheduling Decisions
+    -Risk-Oriented Decisions
+-Defect Prediction
+    -Statistical techniques to examine relationships between software metrics
+     and components containing known software defects
+-Error vs Defect
+    -Error is before shipment
+    -Defect is after shipment
+-Design activites introduce between 50-65% of errors
+-Review techniques are up to 75% effective at finding design flaws
+-Defect Amplification
+    -one defect may cause more errors later on
+-Defect Propagation
+    -impact of an undiscovered error on futrue dev activities or product
+     behavior
+-Technical Review Metrics
+    -Review Effort
+        -Sum of effort measures for reviews
+        - = E_{review} = E_p + E_a + E_r
+    -Total Erros Found
+        -Sum of errors found
+        - = Err_{tot} = Err_{minor} + Err_{major}
+    -Error Density
+        -Errors found per unit of work product reviews
+        - = ErrorDensity = Err_{tot} / WPS
+-Putting more effort into early and frequent technical reviews leads to reduced
+ peak effort and decreased deployment time 
+-Factors leading to increased technical review formality
+    -Distinct roles explicitly defined for reviewers
+    -Sufficient amount of planning and preparation for review
+    -Distinct structure for review is defined
+    -Follow-up by reviewers occurs for any corrections that are made
+-Developing a review checklist for major work products increased the efficacy of
+ informal reviews
+-Formal Technical Review (FTR) Objectives
+    -Uncover errors in function, logic, or implementation
+    -Verify software meets requirements
+    -make projects more manageable
+-FTR Constraints
+    -Between 3-5 people should be involved
+    -Prep should require <= 2 hours of work per person
+    -Duration of meeting should be <= 2 hours
+-FTR Decision Options
+    -Accept product without modification
+    -Reject product due to severe errors (another FTR required)
+    -Accept product provisionally
+-Producer
+    -Developed work product
+-Review Leader
+    -Evaluates product for readiness
+    -Generates copies of product materials
+    -distributes them to 2-3 reviewers for prep
+-Reviewer
+    -Spends 1-2 hours reviewing, making notes, and familiarizing with product
+-Recorder
+    -Individual who records all important issues raised during review
+-Review Issue list Purposes
+    -identify problem areas within product
+    -serve as action item checklist to guide corrections being made
+-FTR Guidelines
+    -Review product, not the producer
+    -Set agenda and maintain it
+    -Limit debate and rebuttal
+
