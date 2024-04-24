@@ -27,12 +27,12 @@
 -Business Risks
     -threaten viability of software and often jeopardize project/product
 -Business Risk Types
-    -building excellent product that no one wants
-        -market risk
-    -building product that no longer fits into business strat for company
-        -strategic risk
-    -building product that sales force doesn't understand how to sell
-        -sales risk
+    -market risk
+        -building excellent product that no one wants
+    -strategic risk
+        -building product that no longer fits into business strat for company
+    -sales risk
+        -building product that sales force doesn't understand how to sell
 -Known Risks
     -uncovered after careful evaluation of project plan, business/technical
      environment in which project is being developed, & other reliable
@@ -43,11 +43,13 @@
     -Can and do occur, but hard to identify in advance
 -Principles of Risk Management
     -Maintain a global perspective
-        -think of system; look at business problem
+        -think of product as component in system; look at business problem
     -Take a forward-looking view
         -think about future risks and contingency plans
     -Encourage open communication
         -consider all risks posed, encourage everyone to suggest possible risks
+    -Integrate
+        -consideration of risk must be integrated into software process
 -Generic Risks
     -Potential threat to every software project
 -Product-Specific Risks
@@ -55,9 +57,12 @@
      environment specific to software to be built
 -Risk Item Checklist Categories
     -Product size
+        -overall size of software to be built/modified
     -Technology to be built
+        -complexity, "newness" of technology packaged by system
     -Staff size and experience
--Risk Components
+        -staff experience and # of SWEs
+-USAF Risk Components
     -Performance risk
         -will product meet requirements and be fit for intended use
     -Cost risk
@@ -66,7 +71,7 @@
         -will resultant software be easy to correct, adapt, and enhance
     -Schedule risk
         -will project schedule be maintained and product delivered on time
--Impact categories (low -> high)
+-Impact categories (low -> high) 
     -negligible
     -marginal
     -critical
@@ -75,11 +80,17 @@
     -attempts to rate each risk in terms of uncertainty and loss
 -Risk Projection Steps
     -establish a scale that reflects perceived likelihood of a risk
-    -delineate consequences of the risk
+    -define consequences of the risk
     -estimate impact of the risk on project and product
     -assess overall accuracy of the risk projection to reduce misunderstandings
 -Fuzzy Logic
     -Recognizes more than just true and false (i.e., nonboolean)
+-Risk Table Headings
+    -Risk (item/description of risk)
+    -Category (PS = project size risk, BU = business risk)
+    -Probability
+    -Impect (scale of how bad would consequences be; in reverse, 1 is worst)
+    -RMMM (plan to monitor, mitigate, manage risk)
 -USAF Risk Consequence Calculation Steps
     -determine average probability of occurence value for each risk component
     -determine impact for each component based on shown criteria
@@ -154,8 +165,8 @@
      changes
     -measure the degree to which changes have been adopted
 -Maturity Model
-    -inends to provide an overall indication of the "process maturity" exhibited
-     by a software organization
+    -intends to provide an overall indication of the "process maturity"
+     exhibited by a software organization
 -Process Maturity Indications
     -quality of the software process
     -degree to which practitioners understand & apply the process
@@ -168,10 +179,15 @@
     -applies a commonsense philosophy
 -BSPI Steps for Org (cylical)
     -look in the mirror
+        -assessment
     -get smarter so as to make intelligent choices
+        -education and training
     -select process model that best meet its needs
+        -selection and justification
     -instantiate the model into its operating environment and its culture
+        -installation/migration
     -evaluate what has been done
+        -evaluation
 -Assessment Activity
     -uncover both strengths & weaknesses in the way your org applies the
      existing software process & the SWE practices that populate the process
@@ -213,6 +229,7 @@
     -a transitional ("here to there") process
     -target ("to be") process
 -Evaluation Activity
+    -"continuous assessment of process as it changes"
     -occurs throughout SPI
     -assesses:
         -degree to which changes have been instantiated and adopted
@@ -314,8 +331,8 @@
     -possibly years to complete
 -Modern/Future SPI Framework focuses
     -become significantly more agile
-    -focus on project level, working to improve team process in weeks, not
-     months or years
+    -focus on project level, working to improve team process in weeks or months,
+     not years
 -Future framework models may give way to simpler models
 -An agile SPI framework should emphasize only a few pivotal practices
 
