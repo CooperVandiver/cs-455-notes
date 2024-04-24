@@ -1,0 +1,291 @@
+-SW Testing Strategy Characteristics
+    -technical reviews necessary
+    -begins at component level and goes outward to integration
+    -different testing techniques needed for different SWE approaches and at
+     different points in time
+    -conducted by developer and (for big projects) an independent test group
+    -testing and debugging are different, but debugging must be accommodated in
+     any testing strategy
+-Verification
+    -set of tasks that ensures software correctly implements a specific function
+    -"Are we building this project right?"
+-Validation
+    -set of tasks that ensures built software is traceable to customer
+     requirements
+    -"Are we building the right product?"
+-Verification and Validation referred to as V&V
+-V&V activities (abbrev)
+    -technical reviews
+    -performance monitoring
+    -simulation
+-testing is last bastion from which quality can be assessed and errors found
+-quality can't be created in testing
+-testing misconceptions
+    -dev should do no testing
+    -software should be "tossed over the wall" to strangers who will test the
+     software mercilessly
+    -testers get involved only when testing is about to begin
+-Testing Spiral (goes inward)
+    -Systems Engineering -> System testing
+    -Requirements -> Validation Testing
+    -Design -> Integration Testing
+    -Code -> Unit Testing
+-No good answer for when testing should be completed
+    -"burden shifts from you to end user"
+-Statistical quality assurance can provide a means for determining when testing
+ is done
+-Necessary tester actions for testing to succeed (abbrev)
+    -Specify requirements in a quantifiable manner long before testing begins
+    -State testing objectives explicitly
+    -Conduct technical reviews to assess test strategy and test cases
+    -Develop a continuous improvement approach
+-Scaffolding required to make a testing framework
+    -driver/stubs must be created for each unit test
+        -driver is main program
+        -stub is a dummy subprogram, replaces subordinate components
+-Exhaustive testing is often not worth it and sometimes impossible
+-Antibugging
+    -Establish error-handling paths and cleanly terminate when errors occur
+-Things to evaluate in a unit test (from figure)
+    -interface
+    -local data structures
+    -boundary conditions
+    -independent paths
+    -error-handling paths
+-Things to evaluate in a unit test
+    -data flow
+        -data should enter and exit component properly
+    -selective testing of execution paths
+        -uncover erroneous computations, incorrect comparisons, or improper
+         control flow
+    -boundary testing
+        -failures around minima and maxima
+-Things to watch when testing error-handling
+    -*error description is unintelligible
+    -*error noted does not correspond with actual error
+    -error condition causes system intervention prior to error handling
+    -exception-condition processing is incorrect
+    -*error description is insufficient at helping find error
+-Create requirements that can be refined into formal use cases/analysis models
+    -use cases/models are then used to help make test cases
+-Customer acceptance statements in user stories can help guide NFRs
+-Anti-Requirements
+    -Specifies how a component should NOT be doing things
+        -often used to specify security-related things
+    -Can describe a user story from the POV of a malicious user
+-Make sure test cases are traceable to requirements
+-White-Box Testing (aka glass-box testing, structural testing)
+    -test-case design philosophy that uses the control structure described as
+     part of a component-level design to derive test cases
+-Benefits of white-box testing in derived test cases
+    -guarantee that all independent paths within a module have been exercised at
+     least once
+    -exercise all logical decisions on their true and false sides
+    -execute all loops at their boundaries and within their operational bounds
+    -exercise internal data structures to ensure their validity
+-Basis Set
+    -Combination of all independent paths
+-Basis Path Testing
+    -enables test-case designer to derive a logical complexity measure of a
+     procedural design and use this measure as a guide for defining a basis set
+     of execution paths
+    -Test cases derived to exercise the basis set are guaranteed to execute
+     every statement in the program at least once during testing
+-Flow graph (aka program graph) must be introduced for basis path method to be
+ introduced
+    -should only be drawn when the logical structure of a component is complex
+-Condition Testing
+    -test-case design method that exercises the logical conditions contained in
+     a program module
+-Data flow testing
+    -selects test paths of a program according to the locations of definitions
+     and uses of variables in the program
+-Loop testing
+    -white-box testing technique that focuses exclusively on the validity of
+     loop constructs
+-Black-Box Testing (BBT)
+    -focuses on the functional requirements of the software
+    -enables you to derive sets of input conditions that will fully exercise all
+     functional requirements for a program
+    -not an alternative to white-box techniques
+        -complementary approach
+        -likely to uncover a different class of errors than white-box methods
+-BBT finds errors in these categories
+    -incorrect or missing functions
+    -interface errors
+    -errors in data structures or external database access
+    -behavior or performance errors
+    -initialization and termination errors
+-BBT tends to be applied in later stages of testing
+-BBT ignores control structure, so attention is focused on information domain
+-BBT tests are designed to answer the following questions (abbrev)
+    -How is functional validity tested?
+    -How are system behavior and performance tested?
+    -What classes of input will make good test cases?
+-BBT derives a set of test cases that satisfy the following criteria:
+    -reduce, by a count > 1, the # of additional test cases that must be
+     designed to achieve reasonable testing
+    -tell you something about the presence or absence of errors, rather than an
+     error associated only with the specific test at hand
+-Interface testing
+    -used to check that the program component accepts information passed to it
+     in the proper order and data types and returns information in proper order
+     and data format
+    -often considered part of integration testing
+-Equivalence partitioning
+    -BBT method that divides the input domain of a program into classes of data
+     from which test cases can be derived
+    -Equivalence classes represent a set of valid or invalid states of input
+     conditions
+    -Guidelines for equivalence classes not included
+-Boundary Value Analysis (BVA)
+    -leads to a selection of test cases that exercise bounding values
+    -test-case design technique that complements equivalence partitioning
+        -rather than selecting any element of an equivalence class, BVA leads to
+         the selection of test cases at the "edge" of the class
+    -Rather than focusing solely on input conditions, test cases are derived
+     from the output domain as well
+    -Test both value and number of values (when necessary)
+    -Test above and below both input and output boundaries
+    -Test within input and output boundaries
+    -Test all internal data structures
+-OO Testing
+    -Class testing
+        -Unit testing but for classes, driven by class methods
+    -Behavioral testing
+        -Tests dynamic behavior of a class and its collaborators
+        -Can be derived from class state diagram
+-Myth that could programmers write non-buggy code is dangerous
+    -Don't feel guilty about bugs fr
+    -Testing is good
+-Attributes of a good test
+    -*Has a high probability of finding an error
+    -*Is not redundant
+    -should be "best of breed"
+    -*should be neither too simple nor too complex
+-Any engineered product can be tested in one of two ways
+    -knowing the specified function that a product has been designed to perform,
+     tests can be conducted that demonstrate each function is fully operational
+     while at the same time searching for errors in each function
+        -external view: black-box testing (BBT)
+    -knowing the internal workings of a product, tests can be conducted to
+     ensure that "all gears mesh," that is, internal operations are performed
+     according to specifications and all internal components have been
+     adequately exercised
+        -internal view: white-box testing (WBT)
+-BBT
+    -integration testing conducted by exercising the component interfaces with
+     other components and with other systems
+    -examines some fundamental aspect of a system with little regard for the
+     internal logical structure of the software
+    -focus is on ensuring the component executes correctly in the larger
+     software build when the input data and software context specified by its
+     preconditions is correct and behaves in the way specified by its
+     preconditions
+    -also ensure that component behaves correctly when its preconditions are not
+     satifised (e.g., can handle bad inputs without crashing)
+    -based on requirements specified in user stories
+-WBT
+    -uses implementation knowledge of the control structures described as part
+     of component-level design to derive test cases
+    -predicated on close examination of procedural implementation details and
+     data structure implementation details
+    -can be designed only after component-level design (or source code) exists
+    -logical paths through the software and collaborations between components
+     are the focus of white-box integration testing
+    -does not prevent all bugs as exhaustive testing is expensive and sometimes
+     not feasible or possible
+-Integration Testing
+    -Systematic technique for constructing the software architecture while at
+     the same time conducting tests to uncover errors associated with
+     interfacing
+    -Objective is to take unit-tested components and build a program structure
+     that has been dictated by design
+-"Big bang" approach is very bad
+    -all components are combined in advance and the entire program is tested as
+     a whole
+    -leads to chaos and horror
+    -errors are hard to isolate and fix
+    -lazy
+-Incremental integration is the antithesis of the "big bang" approach
+    -program is constructed and tested in small increments where errors are
+     easier to isolate and correct
+    -interfaces are more likely to be tested completely
+    -systematic test approach may be applied
+-Integrating incrementally and testing as you go is a more cost-effective
+ strategy 
+-Top-Down Integration
+    -integrated by moving downwards through control hierarchy
+    -starts with main control module (main program)
+-Depth-First Integration
+    -Integrates all components on a major control path of the program structure
+-Bread-First Integration
+    -Incorporates all components directly subordinate at each level, moving
+     across the structure horizontally
+-Top-Down Integration Steps
+    -main control module used as test driver; stubs substituted for all
+     components directly subordinate to the main control module
+    -depending on integration approach selected, subordinate stubs are replaced
+     one at a time with actual components
+    -tests conducted as each component is integrated
+    -on completion of each set of tests, another stub is replaced with the real
+     component
+    -regression testing may be conducted to ensure that new errors have not been
+     introduced
+-Bottom-Up Integration
+    -begins construction and testing with atomic modules (bottom-level modules)
+-Bottom-Up Integration Steps
+    -low-level components combined into clusters that perform a specific
+     software subfunction
+    -driver written to coordinate test-case input and output
+    -cluster is tested
+    -drivers are removed and clusters are combined, moving upward in the program
+     structure
+-Continuous integration
+    -Merging components into evolving software increment once or more each day
+-Smoke Testing
+    -Integration testing approach that can be used when software is developed by
+     an agile team using short increment build times
+    -integrate things together and use broad tests to uncover "show-stopper"
+     errors that have the highest likelihood of throwing the software project
+     behind schedule
+    -Steps (explicit)
+        -written components are integrated into a build that implements a
+         specific subset of product functionality
+        -smoke test recently created build for show stoppers
+        -combine created build with previous builds and smoke test entire
+         integrated package
+-Benefits of Smoke Testing
+    -integration risk is minimized
+    -quality of end product improved
+    -error diagnosis and correction are simplified
+    -progress is easier to assess
+-Test Specification
+    -overall plan for integration of the software and a description of specific
+     tests
+-Test Report
+    -history of actual test results, problems, or peculiarities
+    -can be appended to test specification
+-Regression Testing
+    -executing some subset of tests that have been previously conducted to
+     ensure that changes have not propagated unintended side effects
+-Regression test classes
+    -representative sample of tests that will exercise all software functions
+    -additional tests that focus on software functions that are likely to be
+     affected by the change
+    -tests that focus on the software components that have been changed
+-Thread-Based Testing
+    -integrates set of classes required to respond to one input or event for the
+     system
+-Thread (OO Testing)
+    -Sets of classes that respond to an input or event
+-Use-Based Testing
+    -begins construction of the system by testing those classes that use few (if
+     any) server classes
+    -after independent classes are tested, the next layer of classes, called
+     dependent classes, that use the independent classes are tested
+-Fault-Based Testing (OO)
+    -designing tests that have a high likelihood of unconvering plausible faults
+    -hypothesize a set of plausible faults and derive tests to prove each
+     hypothesis
+

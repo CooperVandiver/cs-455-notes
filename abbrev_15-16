@@ -22,7 +22,7 @@
     -effective software process applied in a manner that creates a useful
      product that provides measurable value for those who produce it and those
      who use it
--three points
+-three points of software quality
     -effective software process
     -useful product
     -adding value for both the producer and user
@@ -40,6 +40,7 @@
     -Reliability
     -Security
     -Maintainability
+
 -Cost of Quality
     -Costs of adding quality combined with not providing enough quality
 -Prevention Costs
@@ -67,7 +68,7 @@
     -complaint resolution
     -warranty work
     -poor reputation/loss of business
--Impact of Management Decisions on Product Quality
+-Management Decisions on Product Quality
     -Estimation Decisions
     -Scheduling Decisions
     -Risk-Oriented Decisions
@@ -82,13 +83,13 @@
 -Defect Amplification
     -one defect may cause more errors later on
 -Defect Propagation
-    -impact of an undiscovered error on futrue dev activities or product
+    -impact of an undiscovered error on future dev activities or product
      behavior
 -Technical Review Metrics
     -Review Effort
         -Sum of effort measures for reviews
         - = E_{review} = E_p + E_a + E_r
-    -Total Erros Found
+    -Total Errors Found
         -Sum of errors found
         - = Err_{tot} = Err_{minor} + Err_{major}
     -Error Density
@@ -101,12 +102,12 @@
     -Sufficient amount of planning and preparation for review
     -Distinct structure for review is defined
     -Follow-up by reviewers occurs for any corrections that are made
--Developing a review checklist for major work products increased the efficacy of
+-Developing a review checklist for major work products increases the efficacy of
  informal reviews
 -Formal Technical Review (FTR) Objectives
     -Uncover errors in function, logic, or implementation
     -Verify software meets requirements
-    -make projects more manageable
+    -Make projects more manageable
 -FTR Constraints
     -Between 3-5 people should be involved
     -Prep should require <= 2 hours of work per person
@@ -117,6 +118,7 @@
     -Accept product provisionally
 -Producer
     -Developed work product
+    -Submits product for review
 -Review Leader
     -Evaluates product for readiness
     -Generates copies of product materials

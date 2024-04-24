@@ -1,0 +1,167 @@
+-SQA Encompasses
+    -SQA/QC tasks
+    -Effective SWE practice
+    -Control of SWE products and changes
+-Elements of SQA
+    -Standards
+    -Testing
+    -Change Management
+    -Safety
+    -Education
+-SQA Tasks
+    -Prepare SQA plan
+    -Audit SWE work products for compliance
+    -Record noncompliance and report to senior management
+-SQA Goals
+    -Requirement quality
+        -Unambigious
+        -Complete
+        -Understandable
+    -Design quality
+        -Architectural Integrity
+        -Component Completenes
+        -Pattern usage
+    -Code quality
+        -Simple
+        -Maintainable
+        -Reusable
+    -QC Effectivness
+        -Completion Rate
+        -Review Effectiveness
+        -Testing Effectiveness
+-Statistical SQA
+    -Collect and categorize errors/defects
+    -Trace each error/defect to cause
+    -Isolate/Correct "vital few" (80% bugs traced to 20% of causes)
+-Six Sigma Core Steps
+    -Define requirements
+    -Measure existing process
+    -Analyze defect metrics, determine vital few
+-DMAIC
+    -Improve process, eliminate root causes of defects
+    -Control the process to prevent future defects
+-DMADV
+    -Design process to avoid root causes of defects and meet requirements
+    -Verify process will avoid defects and meet requirements
+-Software reliability
+    -Probability of failure-free operation of a computer program in a specified
+     environment for a specified time
+-Mean Time Between Failure (MTBF)
+    -Sum of Mean Time To Failure (MTTF) and Mean Time To Repair (MTTR)
+-MTBF Problems
+    -No projected failure rate
+    -Can be misinterpreted to mean average lifespan of software
+-Software Safety
+    -SQA activity that focuses on identifying and assessing potential hazards
+     that may affect software negatively and cause an entire system to fail
+-ISO 9001:2015 Standard Outline
+    -Support QC and QA
+    -Establish Review Mechanisms
+    -Establish Control Mechanisms
+-SQA Plan Structure
+    -Purpose and scope of plan
+    -Description of all relevant SWE work products
+    -Applicable standards and practices
+    -SQA actions and tasks along with placement in process
+-Microsoft Security Development Lifecycle (SDL)
+    -introduces security and privacy early and throughout all phases
+    -most widely known and used security development life-cycle model
+-SD3 + C
+    -Secure by Design
+        -Secure architecture, design, and structure
+        -Threat modeling and mitigation
+    -Secure by Default
+        -Least privilege
+        -Conservative default settings
+    -Secure in Deployment
+        -Deployment guides
+        -Patch deployment tools
+    -Communications
+        -Security response
+        -Community engagement
+-SDL Steps
+    -Training
+    -Requirements
+    -Design
+    -Implementation
+    -Verification
+    -Release
+    -Response
+-Security QUAlity Requirements Engineering (SQUARE)
+    -Representative security requirements engineering process model
+    -provides for eliciting, categorizing, and prioritizing security
+     requirements for software-intensive systems
+-SQUARE steps
+    -Agree on definitions
+    -Identify assets and security goals
+    -Develop artifacts
+    -Perform risk assessment
+-NIST Risk Management Framework (RMF)
+    -security risk assessment method
+    -widely used
+    -provides guidelines for users
+-RMF Steps
+    -Select baseline security controls
+    -Implement security controls and define how they are employed
+    -Assess security controls for implementation and effectiveness
+-Threat modeling method (TMM)
+    -approach for creating abstraction of software system
+    -aimed at identifying attackers' abilities and goals
+    -uses abstraction to generate and catalog possible threats
+-STRIDE (types of threats)
+    -Spoofing
+    -Tampering
+    -Repudiation
+    -Information Disclosure
+    -Denial of service
+    -Elevation of privilege
+-Repudiation
+    -Ability of a user or system to deny having performed an action or
+     transaction
+    -Counteracted using ... to ensure actor cannot deny involvement:
+        -digital signatures
+        -audit trails
+        -logging
+    -Denying having paid for something after getting item
+-Attack Surface
+    -Data paths into and out of application
+    -Code that products in/out paths
+    -Valuable data
+    -Code to protect valuable data
+-SEI Cert Top 10
+    -Validate input
+    -Heed compiler warnings
+    -Keep it simple
+    -Default deny
+-OWASP Software Assurance Maturity Model (SAMM)
+    -Evaluate existing software security practices
+    -Build balanced software security assurance program in defined iterations
+    -Demonstrate concrete improvements to security assurance program
+    -Define and measure security-related activities throughout org
+-HCI
+    -Human Computer Interaction
+    -A multidisciplinary field of study focusing on the design of computer
+     technology and, in particular, the interaction between humans (the users)
+     and computers
+-Factors that influence HCI
+    -Useful
+    -Usable
+    -Findable
+-Problems solved by HCI
+    -Human-Technology Symbiosis
+    -Human-Environment Interaction
+    -Accessibility and universal access
+-Wickens' Thirteen Principles
+    -Perceptual
+        -Make displays legible
+            -Users should be able to see and understand displayed information
+    -Mental Model
+        -Pictorial Realism
+            -Display should look like variable it represents
+    -Based on Attention
+        -Proximity Compatibility
+            -Relevant information hsould be grouped together
+    -Memory
+        -Predictive Aiding
+            -Show information before needed
+

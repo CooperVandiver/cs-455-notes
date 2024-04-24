@@ -1,0 +1,157 @@
+-Measure
+    -when a single data point has been collected
+-Measurement
+    -occurs as the result of the collection of one or more data points
+        ->= 1 measures
+-Software Metric
+    -relation of individual measures in some way
+-Attributes of effective software metrics
+    -easy to learn how to derive metric
+    -should be intuitive about attribute under consideration
+    -should yield unambiguous results
+-analytics help decisions regarding
+    -targeted testing
+    -targeted refactoring
+    -release planning
+-requirements model metrics characteristics
+    -specificity
+    -correctness
+    -traceability
+    -modifiability
+-mobile app metric measures
+    -# of static screen displays
+    -# of dynamic screen displays
+    -# of external systems interfaced
+-architectural design complexity metrics
+    -structural complexity
+    -data complexity
+    -system complexity
+        -sum of structural and data complexity
+-OO Design Metrics
+    -Size
+    -Complexity
+    -Coupling
+    -Primitiveness
+-OO System Metrics
+    -Weighted Methods per Class (WMC)
+    -Depth of the Inheritance Tree (DIT)
+    -Number of Children (NOC)
+    -Coupling Between Object Classes (CBO)
+-UI Design Metrics
+    -Interface Metrics
+        -Layout Complexity
+            -# of distinct regions defined for an interface
+        -Typing Effort
+            -avg # of keystrokes for a specific function
+        -Memory Load
+            -avg # of distinct data items that user must remember to achieve a
+             specific objective
+    -Aesthetic Metrics
+        -Word Count
+            -total # of words that appear on a page
+        -Link Count
+            -total # of links on a page
+        -Graphics Count
+            -total # of graphics on a page
+    -Content Metrics
+        -Page Wait
+            -avg time for a page to download 
+        -Graphic Complexity
+            -avg # of graphics media per page
+        -Audio Complexity
+            -avg # of audio media per page
+    -Navigation Metrics
+        -Page-Linking Complexity
+            -# of links per page
+        -Connectivity
+            -total # of links
+        -Connectivity Density
+            -Connectivity divided by page count
+-Source Code Complexity Metrics
+    -n_1 # of distinct operators that appear in a program
+    -n_2 # of distinct operands that appear in a program
+    -N_1 total # of operator occurances
+    -N_2 total # of operand occurances
+-Testing Metric Categories
+    -# of tests required
+    -test coverage for a given component
+-OO System Metrics
+    -Lack of cohesion in methods (LCOM)
+        -more LCOM == more required states to test
+    -Number of root classes (NOR)
+        -# of distinct class hierarchies in the design model
+    -Number of children (NOC)
+    -Depth of the inheritance tree (DIT)
+-Software Maturity Index (SMI)
+    -Provides indication of the stability of a software product
+-Software Maturity Index (SMI) Info
+    -# of modules in current release
+    -# of modules in current release that have been change
+    -# of modules in current release that have been added
+    -# of modules removed from previous release
+-Project Metrics 
+    -assess status of ongoing project
+    -track potential risks
+    -uncover problem areas early
+-Software Metrics Etiquette
+    -Don't use metrics to appraise individuals
+    -Never use metrics to threaten individuals or teams
+    -Don't obsess on a single metric to the exclusion of other metrics
+-Size-Oriented Software Metrics
+    -Errors per KLOC (thousand lines of code)
+    -Defects per KLOC
+    -$ per KLOC
+    -Pages of documentation per KLOC
+-Software Quality Metrics
+    -Correctness
+    -Maintainability
+    -Integrity
+    -Usability
+-Defect Removal Efficiency
+    -(# of Errors) / ((# of Errors) + (# of Defects))
+-4 Ps of Software Project Management (by order of importance)
+    -People
+    -Product
+    -Process
+    -Project
+-Stakeholders
+    -Senior managers (product owners)
+    -Project (technical) manager (scrum masters / team leads)
+    -Practitioners
+    -Customers
+    -End Users
+-Practices of good team leads
+    -Model the way (lead by example)
+    -Challenge the process
+    -Enable others to act
+-Factors to consider when building a SWE team
+    -difficulty of problem
+    -"size" of resultant program(s)
+    -rigidity of delivery date
+    -degree of sociability (communication) required for project
+-Toxic team environment factors
+    -frenzied work atmosphere
+    -unclear roles
+    -Continuous and repeated exposure to failure
+-Software Scope
+    -Context
+    -Information Objectives
+    -Function and Performance
+-Characteristics of a well-defined process (or project)
+    -Clear, well-understood, and accepted requirements
+    -Skilled and engaged team members
+    -Customer needs are understood and satisfied
+    -Team members w/ high degree of job satisfaction
+    -A working product that reflects desired scope & quality
+-W5HH
+    -Series of questions that lead to a definitions of key product
+     characteristics and the resultant project plan
+-W5HH Principle Components
+    -Why is the system being developed?
+    -What will be done?
+    -When will it be done?
+    -Who is responsible for a function?
+    -Where are they located organizationally?
+    -How will the job be done technically and managerially?
+    -How much of each resource is needed?
+

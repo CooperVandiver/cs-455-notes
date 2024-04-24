@@ -1,0 +1,341 @@
+-Guidelines for mobile app testing
+    -understand network and device landscape to identify bottlenecks
+    -conduct tests in uncontrolled real-world conditions
+    -select the right automation test tool
+-Testing Considerations
+    -Device compatibility testing
+    -Performance testing
+    -Security testing
+    -Testing in the wild
+-Mobile app testing goals
+    -create test cases that uncover defects early in dev cycle
+    -verify presence of important quality attributes
+-quality attributes for mobile apps
+    -functionality
+    -reliability
+    -usability
+-predictive technologies
+    -often used with virtual keyboards to facilitate user input
+    -e.g., autocomplete
+-recovery testing
+    -system test that forces software to fail in a variety of ways and verifies
+     that recovery is properly performed
+    -if automatic: reinitialization, checkpointing mechanisms, data recovery, &
+     restart are evaulated
+    -if human intervention required: mean time to repair evaluated
+-content testing
+    -attempts to uncover errors in content
+    -typos, incorrect info, improper organization, violation of laws
+-content testing objectives
+    -uncover syntactic errors (e.g., typos, grammar errors)
+    -uncover semantic errors (e.g., errors in accuracy or completeness of info)
+    -find errors in organization or structure of content shown to end user
+-interface testing strategy
+    -uncover errors related to specific interface mechanisms (e.g., errors in
+     proper execution of a menu link or the way data are entered in a form)
+    -uncover errors in the way the interface implements the semantics of
+     navigation, web app functionality, or content display
+-interface testing strategy steps
+    -interface features tested to ensure that design rules, aesthetics, and
+     related visual content are available for the user without error
+    -individual interface mechanisms are "unit tested"
+    -each interface mechanism tested within context of a use case or network
+     semantic unit
+-navigation testing
+    -ensures mechanisms that allows user to travel through app are functional
+    -validate that each NSU can be achieved by appropriate user category
+-internationalization
+    -process of creating a software product so that it can be used in several
+     countries and with various languages without requiring any engineering
+     changes
+-localization
+    -process of adapting a software app for use in targeted global regions by
+     adding locale-specific requirements and translating text elements to
+     appropriate languages
+-crowdsourcing
+    -distributed problem-solving model where community members work on solutions
+     to problems posted to the group
+-security testing
+    -attempts to verify that protection mechanisms built into a system will, in
+     fact, protect it from improper penetration
+-performance testing
+    -used to uncover performance problems that can result from a lack of
+     server-side resources, inappropriate network bandwidth, inadequate database
+     capabilities, faulty or weak OS capabilities, poorly designed web app
+     functionality, and other hardware or software issues that can lead to
+     degraded client-server performance
+-performance testing intents
+    -understand how system responds to loading
+    -collect metrics that will lead to design modifications to improve
+     performance
+-Loading
+    -i.e., # of users, # of transactions, or overall data volume
+-Load Testing
+    -examines real-world loading at a variety of load levels and in a variety of
+     combinations
+-stress testing
+    -forces loading to be increased to breaking points to determine how much
+     capacity the app environment can handle
+-Performance (throughput) Calculation
+    -P <- performance (throughput)
+    -N <- # of concurrent users
+    -T <- # of online transactions per unit time
+    -D <- data load processed by server per transaction
+    -P = N * T * D
+-Actions that create extreme conditions
+    -running several mobile apps on same device
+    -infecting system software with viruses or malware
+    -attempting to take over a device and using it to spread spam
+    -forcing mobile app to process inordinately large # of transactions
+    -storing inordinately large quantities of data on the device
+-Testing in the wild
+    -Testing in users' native environments with production release versions of
+     the mobile app resources
+    -designed to be agile and respond to changes as app evolves
+-Weighted Device Platform Matrix (WDPM)
+    -helps ensure test coverage includes each combo of mobile device and context
+     variables
+-Steps to build WDPM
+    -list important OS variants as matrix column labels
+    -list targeted devices as matrix row labels
+    -assign a ranking to indicated relative importance of each OS and each device
+    -compute produce of each pair of rankings and enter as cell entry for
+     device-OS combo (N/A if not available)
+-Static Testing
+    -software verification technique that focuses on review rather than
+     executable testing
+-Dynamic testing
+    -validation technique for AI systems that exercises source code with test
+     cases
+-Model-based testing
+    -black-box testing technique that uses info contained in requirements model
+     as basis for generation of test cases
+-Model-based testing steps
+    -Analyze an existing behavioral model for the software, or create one
+    -Traverse behavioral model and specify inputs that will force software to
+     transition from state to state
+    -review behavioral model, and note expected outputs as the software
+     transitions from state to state
+    -execute test cases
+    -compare actual and expected results and take corrective action as required
+-Acceptance tests
+    -series of specific tests conducted by customer in an attempt to uncover
+     product errors before accepting the software from the developer
+-Alpha test
+    -conducted at developer's site by a representative group of end users
+-Beta test
+    -conducted at one or more end-user sites
+    -"live" application of software in an environment that cannot be controlled
+     by the developer
+-Usability testing
+    -evaluated degree to which users can interact effectively with the app and
+     the degree to which the app guides users' actions, provides meaningful
+     feedback, and enforces a consistent interaction approach
+-Usability testing abstraction levels
+    -usability of a specific interface mechanism can be assessed
+    -usability of a complete virtual interface can be evaluated
+    -usability of the complete virtual-world app can be considered
+-Usability testing categories/objectives
+    -Interactivity
+    -Layout
+    -Readability
+    -Aesthetics
+-Accessibility Testing
+    -process of verifying the degree to which all people can use a computer
+     system regardless of any user's special need
+-Examples of areas of focus for accessibility testing
+    -ensure all nontext screen objects have a text-based description
+    -verify that color is not used extensively to convey info to user
+    -demonstrate that high contrast and magnification options are available for
+     elderly or visually challenged users
+-Playbility
+    -Degree to which a game or simulation is fun to play and usable by the
+     user/player and was originally conceived as part of the development of
+     video games
+-Things that affect playability
+    -usability
+    -storyline
+    -strategy
+    -mechanics
+-Documentation and help facilities should be tested by independent third party
+    -not being able to get help sucks
+-Software Configuration Management (SCM)
+    -umbrella activity applied throughout the software process
+-SCM Activities
+    -Identify change
+    -Control change
+    -Ensure change is being properly implemented
+    -Report changes to others who may have an interest
+    -From here, either:
+        -publish/deploy build
+        -identify new change
+-SCM activities developed to:
+    -identify change
+    -control change
+    -ensure change is being properly implemented
+    -report changes to others who may have an interest
+-Output of software process is info divided into 3 broad categories
+    -computer programs (both source and exectuable forms)
+    -work products that describe the computer programs (for stakeholders)
+    -data or content (contained in program or external)
+-Software Configuration
+    -items that comprise all info produced as part of the software process
+-Software Configuration Items (SCIs)
+    -named element of info
+-First law of system engineering
+    -"No matter where you are in the system life cycle, the system will change,
+     and the desire to change it will persist throughout the life cycle."
+-4 Sources of change
+    -new business/market conditions cause changes in requirements or rules
+    -new stakeholder needs
+    -reorganization or business growth/downsizing
+    -budgetary or scheduling constraints
+-CM for different levels
+    -Project Manager/Team Leader: goal is to ensure product is developed within
+     a certain time frame
+    -Configuration Manager: ensure that procedures and policies for creating,
+     changing, and testing of code are followed, as well as to make information
+     about the project accessible
+    -SWE: goal is to work effectively
+    -Customer: uses the project, follows formal procedures for requesting
+     changes and for indicating bugs in the product
+-Elements of a CM system
+    -Component elements
+    -Process elements
+    -Construction elements
+    -Human elements
+-Baseline
+    -A specification or product that has been formally reviewed and agreed upon,
+     that thereafter serves as the basis for further development, and that can
+     be changed only through formal change procedures
+-Project database
+    -aka: project library, software repository
+-Impact analysis
+    -ensuring software devs employ strategies to minimize the impact of
+     colleagues' actions on their own work
+    -encouragin software devs to use practices that minimize the impact of their
+     own work on that of their colleagues
+-SCM meta-model
+    -determines how info is stored in the repo
+    -determines how data can be accessed by tools and viewed by SWEs
+    -determines how well security and integrity can be maintained
+    -determines how easily the existing model can be extended to accommodate new
+     needs
+-Robust repo classes of service
+    -same as any sophisticated DBMS
+    -services specific to the SWE environment
+-Repo that serves a SWE team should:
+    -integrated with or directly support process management functions
+    -support specific rules that govern the SCM function and data maintained
+     within the repo
+    -provide an interface to other SWE tools
+    -accomodate storage of sophisticated data objects (e.g., text, graphics,
+     video, audio)
+-SCM Features
+    -Versioning
+    -Dependency tracking and change management
+    -requirements tracing
+    -configuration management
+    -audit trails
+-Version control system
+    -project database (repo)
+    -version management capability that stores all versions of a configuration
+     object
+    -a make facility that enables you to collect all relevant config objects and
+     construct a specific version of the software
+    -issue tracking
+-change set
+    -collection of all changes to baseline needed to create a specific version
+     of the software
+-system model components
+    -template that includes a component hierarchy and a "build order" for
+     components that describes how the system must be constructed
+    -construction rules
+    -verification rules
+-SCM Best Practices
+    -keep number of code variants small
+    -test early and often
+    -integrate early
+    -tool use to automate testing, building, and code integration
+-Continuous Integration advantages
+    -Accelerated feedback
+    -increased quality
+    -reduced risk
+    -improved reporting
+-SCM Process Layers (outside -> in)
+    -Reporting
+    -Configuration Auditing
+    -Version Control
+    -Change Control
+    -Identification
+    -SCIs
+-Change Control Authority
+    -person or group that makes a final decision on the status and priority of
+     the change
+-Engineering Change Order (ECO)
+    -generated for each approved change
+    -describes change to be made, constraints to respect, and criteria for
+     review and audit
+-Types of change control
+    -Informal
+        -used before an SCI becomes a baseline
+        -any changes justified by project and technical requirements can be made
+         by developer
+    -Project Level
+        -used when an SCI becomes a baseline
+        -the developer must gain approval from project manager or CCA (depending
+         on if the change affects other SCIs) to make changes
+    -Formal
+        -Used when product is released to customers
+-Synchronization Control
+    -helps to ensure that parallel changes don't overwrite one another
+-How can a software team ensure change has been properly implemented?
+    -technical reviews
+    -software configuration audit
+-Configuration Status Reporting
+    -SCM task that answers the following questions:
+        -What happened?
+        -Who did it?
+        -When did it happen?
+        -What else will be affected?
+-Content or function changes should be lumped into one of four classes:
+    -corrects an error or enhances local content or functionality
+    -has an impact on other content objects or functional components
+    -broad impact across an app (e.g., major extension of functionality,
+     significant enhancement or reduction in content, major required changes in
+     navigation)
+-Change Description
+    -describes change and providing a brief assessment of the impact of the
+     change
+-Content management
+    -related to config management
+    -Content Management System (CMS) establishes a process that acquires
+     existing content, structures it in a way that enables it to be presented to
+     an end user, and then provides it to the client-side environment for
+     display
+-Collection subsystem
+    -Encompasses all actions required to create and/or acquire content,
+     technical functions necessary to represent content, and organize content
+     into screens that can be displayed to client
+-Management Subsystem
+    -Configuration management performed within this
+    -Elements:
+        -Content database
+        -Database capabilities
+        -Configuration management functions
+-Publishing Subsystem
+    -Converts content into a form fit for publication so that it can be
+     transmitted to client-side screen displays
+    -Components
+        -Static Elements
+        -Publication Services
+        -External Services
+-Version Control Guidelines
+    -Central repository for app/game project should be established
+    -Each developer creates his own working folder
+    -The clocks on all dev workstations should be synchronized
+    -As new configurations objects are developed or existing objects are
+     changed, they are imported into the central repo
+    -As objects are imported or exported from repo, an automatic, time-stamped
+     log message is made
+

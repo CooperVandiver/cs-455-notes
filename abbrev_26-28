@@ -1,0 +1,321 @@
+-Tech debt
+    -describes cost associated with putting off activities like software
+     documentation and refactoring
+-Reactive risk strategy
+    -Indiana Jones type shit
+    -no one is Indiana Jones, can't fix shit on the spot
+    -Leads to fire-fighting mode, a.k.a. crisis management
+-Proactive risk strategy
+    -fixing shit before it all falls apart
+-Risk characteristics
+    -uncertainty
+        -risk may or may not happen
+    -loss
+        -consequences of risk happening
+-Project Risks
+    -Threaten project
+-Project Risk Types
+    -budgetary
+    -schedule
+    -personnel
+-Technical Risks
+    -Threaten quality and timeliness of software to be produced
+-Technical Risk Types
+    -design
+    -implementation
+    -interface
+-Business Risks
+    -threaten viability of software and often jeopardize project/product
+-Business Risk Types
+    -building excellent product that no one wants
+        -market risk
+    -building product that no longer fits into business strat for company
+        -strategic risk
+    -building product that sales force doesn't understand how to sell
+        -sales risk
+-Known Risks
+    -uncovered after careful evaluation of project plan, business/technical
+     environment in which project is being developed, & other reliable
+     information sources
+-Predictable Risks
+    -Extrapolated from past project experience
+-Unpredictable Risks
+    -Can and do occur, but hard to identify in advance
+-Principles of Risk Management
+    -Maintain a global perspective
+        -think of system; look at business problem
+    -Take a forward-looking view
+        -think about future risks and contingency plans
+    -Encourage open communication
+        -consider all risks posed, encourage everyone to suggest possible risks
+-Generic Risks
+    -Potential threat to every software project
+-Product-Specific Risks
+    -can be identified only by those who understand the tech, people, and
+     environment specific to software to be built
+-Risk Item Checklist Categories
+    -Product size
+    -Technology to be built
+    -Staff size and experience
+-Risk Components
+    -Performance risk
+        -will product meet requirements and be fit for intended use
+    -Cost risk
+        -will project budget be maintained
+    -Support risk
+        -will resultant software be easy to correct, adapt, and enhance
+    -Schedule risk
+        -will project schedule be maintained and product delivered on time
+-Impact categories (low -> high)
+    -negligible
+    -marginal
+    -critical
+    -catastrophic
+-Risk Projection (Risk Estimation)
+    -attempts to rate each risk in terms of uncertainty and loss
+-Risk Projection Steps
+    -establish a scale that reflects perceived likelihood of a risk
+    -delineate consequences of the risk
+    -estimate impact of the risk on project and product
+    -assess overall accuracy of the risk projection to reduce misunderstandings
+-Fuzzy Logic
+    -Recognizes more than just true and false (i.e., nonboolean)
+-USAF Risk Consequence Calculation Steps
+    -determine average probability of occurence value for each risk component
+    -determine impact for each component based on shown criteria
+    -complete risk table and analyze results
+-Risk Exposure (RE)
+    -RE = P X C
+    -P <- probability of occurance for a risk (uncertainty)
+    -C <- cost to project if risk occurs (loss)
+-If total RE > 50% of project cost, viability of project questioned
+-Condition-Transition-Consequence (CTC) Format
+    -"Given that <cond> then there is concern that (possibly) <consequence>."
+-Risk Mitigation
+    -Avoiding identified risks
+    -Given example: reducing employee turnover rate
+-Risk-Monitoring
+    -monitoring factors that indicate whether a risk is becoming more or less
+     likely
+-Risk Management and Contingency Planning
+    -assumes risk mitigation efforts failed and risk has become reality
+    -plan for how to continue giving risk becoming real
+-Gamification
+    -approach to encouraging software developers to follow process compliance
+     procedures in areas like quality and risk management
+    -awarding points, badges, or other nonmonetary awards to each developer and
+     use a leaderboard to show each person's ranking within the development
+     group
+    -don't reward for intentionally adding problems then solving them
+-Software Safety and Hazard Analysis
+    -software quality assurance activities that focus on identification and
+     assessment of potential hazards that may affect software negatively and
+     cause entire system to fail
+-Risk Mitigation, Monitoring, and Management Plan (RMMM)
+    -documents all work performed as part of risk analysis and is used by
+     project manager as part of the overall project plan
+-Risk Information Sheet (RIS)
+    -documents an individual risk
+-Risk Monitoring Primary Objectives
+    -assess whether predicted risks do, in fact, occur
+    -ensure risk aversion steps defined for the risk are being properly applied
+    -collect info that can be used for future risk analysis
+-Risk monitoring also attempts to allocate origin
+    -finding which risk(s) caused which problems throughout the project
+-Software Process Improvement (SPI) Steps
+    -assessment
+    -education & training
+    -selection & justification of process and technology
+    -implementation of the SPI plan
+    -evaluation and tuning of the results
+-SPI implications
+    -elements of an effective software process definable in an effective manner
+    -existing organizational approach to software dev can be assessed against
+     those elements
+    -a meaningful strategy for improvement can be defined
+-SPI not free
+-SPI must lead to a reduction in software "problems" that cost time & money
+    -# of defects delivered to end users
+    -amount of rework due to quality problems
+    -costs associated with software maintenance & support
+    -indirect costs that occur when software is delivered late
+-SPI frameworks define:
+    -set of characteristics that must be present if an effective software
+     process is to be achieved
+    -method for assessing whether those characteristics are present
+    -mechanism for summarizing the results of each assessment
+    -strategy for assisting a software organization in implementing those
+     process characteristics that have been found to be weak or missing
+-SPI frameworks assess the "maturity" of an org's software process and provides
+ a qualitative indication of a maturity level
+-As an SPI framework is applied, an org must establish mechanisms to:
+    -support technology transition
+    -determine the degree to which an org is ready to absorb proposed process
+     changes
+    -measure the degree to which changes have been adopted
+-Maturity Model
+    -inends to provide an overall indication of the "process maturity" exhibited
+     by a software organization
+-Process Maturity Indications
+    -quality of the software process
+    -degree to which practitioners understand & apply the process
+    -general state of SWE practice
+-SPI (or aspects of it) _may_ be overkill for certain orgs
+-Financial Leverage
+    -examining technical benefits and translating them into dollars
+-IDEAL?
+-Book SPI (BSPI) Road Map
+    -applies a commonsense philosophy
+-BSPI Steps for Org (cylical)
+    -look in the mirror
+    -get smarter so as to make intelligent choices
+    -select process model that best meet its needs
+    -instantiate the model into its operating environment and its culture
+    -evaluate what has been done
+-Assessment Activity
+    -uncover both strengths & weaknesses in the way your org applies the
+     existing software process & the SWE practices that populate the process
+    -examines a wide range of actions & tasks that will lead to a high-quality
+     process
+-Assessment Musts (abbrev.)
+    -established methods for representing user requirements
+    -risk analysis methods
+    -change management procedures
+-Role of assessment
+    -look behind the answer to determine whether the activity in question is
+     being performed in a manner that would conform to best practice
+-Issues to focus on during assessment
+    -consistency
+    -sophistication
+    -acceptance
+    -commitment
+-Education and Training Activity
+    -Ensure everyone knows what's going on
+-Selection and Justification Activity
+    -process characteristics and specific SWE methods and tools are chosen to
+     populate the software process
+    -choose a process model that works for your org, stakeholders, & software
+        -focus on process characteristics that address weaknesses
+    -develop an adaptable work breakdown for each SWE framework activity
+    -consider org culture and level of accceptance for each choice made
+    -don't get stuck on "paralysis by analysis"
+-Installation Activity
+    -first point at which software orgs feel the effects of changes triggered by
+     following the SPI road map
+    -changes selected are integrated into or replace parts of the existing
+     process model
+    -incremental migration from old to new process can be a better strategy
+-Installation and Migration are software process redesign (SPR) activities
+    -concerned with identification, application, and refinement of new ways to
+     dramatically improve and transform software processes
+-Process models considered when a formal approach to SPR is initiated
+    -existing ("as is") process
+    -a transitional ("here to there") process
+    -target ("to be") process
+-Evaluation Activity
+    -occurs throughout SPI
+    -assesses:
+        -degree to which changes have been instantiated and adopted
+        -degree to which such changes result in better software quality or other
+         tangible process benefits
+        -status of the process and org culture as SPI activities proceed
+    -both qualitative and quantitative metrics considered
+        -qualitative
+            -change in attitude towards process from management & practitioners
+        -quantitative
+            -SQA metrics from old & new process compared
+-Common SPI Risks
+    -lack of management support
+    -cultural resistance by technical staff
+    -poorly planned SPI strategy
+-Risk should be managed at 3 key points in the SPI process
+    -Prior to initiation of the SPI road map
+    -during execution of SPI activities
+    -during evaluation activity that follows instantiation of some process
+     characteristic
+-SPI Risk Factor Categories
+    -budget and cost
+    -content and deliverables
+    -culture
+-Capability Maturity Model Integration (CMMI)
+    -a comprehensive process meta-model that is predicated on a set of system &
+     software engineering capabilities that should be present as orgs reach
+     different levels of process capability & maturity
+-CMMI represents a process meta-model in two ways
+    -"continuous"
+    -"staged"
+-CMMI Capability Levels
+    -0: Incomplete
+        -Process area not performed or does not achieve all goals & objectives
+         defined by the CMMI for level 1 capability for the process area
+    -1: Performed
+        -all specific work goals of the process area have been satisfied
+        -work tasks required to produce defined work products are being
+         conducted
+    -2: Managed
+        -all work associated with process area conforms to an organizationally
+         defined policy
+        -all people doing the work have access to adequate resources to do job
+        -stakeholders actively involved in process area as required
+        -all work tasks & work products are "monitored, controlled, & reviewed;
+         and are evaluated for adherence to the process description"
+    -3: Defined
+        -process "tailored from the organization's set of standard process
+         according to the organization's tailoring guidelines, and contributes
+         work products, measures, and other process-improvement information to
+         the organizational process assets"
+    -4: Quantitatively managed
+        -process area controlled and improved using measurement and quantitative
+         assessment
+        -"quantitative objectives for quality and process performance are
+         established and used as criteria in managing the process"
+    -5: Optimized
+        -process area is adapted and optimized using quantitative (statistical)
+         means to meet changing customer needs & to continually improve the
+         efficacy of the process area under consideration
+-Specific goals
+    -establish the characteristics that must exist if the activities implied by
+     a process area are to be effective
+-Specific practices
+    -refine a goal into a set of process-related activities
+-Software Process Improvement and Capability dEtermination (SPICE) model
+    -provides SPI assessment framework compliant with ISO 15504-5:2015 & ISO
+     12207:2017
+    -purpose was to provide a framework to assess a process & provide info on
+     the strengths, weaknessess, and capabilities to help an org achieve its
+     goals
+-TickIT Plus
+    -auditing method
+    -ensures compliance with ISO 9001:2015 for Software
+        -a generic standard that applies to any org that wants to improve the
+         overall quality of the products, systems, or services that it provides
+        -adopted a "plan-do-check-act" cycle
+-"plan-do-check-act" overview
+    -Plan
+        -establishes the process objectives, activities, and tasks necessary to
+         achieve high-quality software and resultant customer satisfaction
+    -Do
+        -implements software process
+    -Act
+        -initiates SPI activities that continually work to improve the process
+-SPI ROI Calculation
+    -ROI <- ((sum(benefits) - sum(costs)) / sum(costs)) * 100%
+    -benefits
+        -include cost savings associated with higher product quality (fewer
+         defects), less rework, reduced effort associated with changes, & the
+         income that accrues from shorter time to market
+    -costs
+        -include both direct SPI costs (e.g., training, measurement) and
+         indirect costs associated with greater emphasis on quality control &
+         change management activities & more rigorous application of SWE methods
+         (e.g., creation of a design model)
+-Costs of typical application of an SPI framework
+    -$25,000 to $70,000 per person
+    -possibly years to complete
+-Modern/Future SPI Framework focuses
+    -become significantly more agile
+    -focus on project level, working to improve team process in weeks, not
+     months or years
+-Future framework models may give way to simpler models
+-An agile SPI framework should emphasize only a few pivotal practices
+
